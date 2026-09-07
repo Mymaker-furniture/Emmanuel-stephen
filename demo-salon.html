@@ -1,33 +1,32 @@
-<style>
+<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Studio Nia</title><style>
 .site-footer{
-  margin-top:90px;background:#171717;color:#fff;padding:0;
-  overflow:hidden;
+  margin-top:90px;background:#171717;color:#fff;padding:0;overflow:hidden
 }
-.newsletter-band{
-  width:min(1100px,92%);margin:auto;padding:55px 0 48px;
-  display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:end;
+.demo-newsletter{
+  width:min(1100px,92%);margin:auto;padding:52px 0 45px;
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end
 }
-.newsletter-band .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
-.newsletter-band h2{font:600 clamp(38px,6vw,72px)/.9 "Space Grotesk",Arial,sans-serif;letter-spacing:-.055em;margin:12px 0 0;max-width:700px}
-.newsletter-band p{color:#aaa;max-width:390px;margin:0 0 15px}
-.newsletter-form{display:flex;gap:8px;align-items:stretch}
-.newsletter-form input{
-  flex:1;min-width:0;background:#242424;border:1px solid #3b3b3b;color:#fff;
-  padding:15px 16px;border-radius:10px;outline:none;
+.demo-newsletter .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.58}
+.demo-newsletter h2{font:600 clamp(36px,6vw,68px)/.9 "Space Grotesk";letter-spacing:-.055em;margin:10px 0 0;max-width:650px}
+.demo-newsletter p{color:#a2a2a2;max-width:400px;margin:0 0 14px}
+.demo-subscribe{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.demo-subscribe input{
+  min-width:0;width:100%;background:#242424;border:1px solid #3a3a3a;color:#fff;
+  padding:14px 15px;border-radius:9px;outline:none
 }
-.newsletter-form input::placeholder{color:#777}
-.newsletter-form button{
-  border:0;padding:15px 18px;border-radius:10px;background:var(--footer-accent,#d47755);
-  color:#fff;font-weight:800;white-space:nowrap;cursor:pointer;
+.demo-subscribe input::placeholder{color:#777}
+.demo-subscribe button{
+  border:0;padding:14px 17px;border-radius:9px;background:#c97858;
+  color:#fff;font-weight:800;white-space:nowrap
 }
 .footer-inner{
   width:min(1100px,92%);margin:auto;border-top:1px solid #303030;
-  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0;
+  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0
 }
 .footer-brand strong{font-size:28px;letter-spacing:-.04em}
 .footer-brand p{color:#aaa;max-width:300px}
 .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.footer-links b{display:block;margin-bottom:13px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.footer-links b{display:block;margin-bottom:13px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .footer-links a,.footer-links p{display:block;color:#999;font-size:13px;margin:8px 0}
 .footer-links a:hover{color:#fff}
 .footer-bottom{
@@ -35,28 +34,40 @@
   padding:20px 0;display:flex;justify-content:space-between;color:#777;font-size:12px
 }
 @media(max-width:700px){
-  .newsletter-band{grid-template-columns:1fr;gap:24px;padding:42px 0}
-  .newsletter-band h2{font-size:48px}
-  .newsletter-form{display:grid;grid-template-columns:1fr}
-  .newsletter-form input,.newsletter-form button{width:100%;min-height:50px}
+  .demo-newsletter{grid-template-columns:1fr;gap:22px;padding:40px 0}
+  .demo-newsletter h2{font-size:48px}
+  .demo-subscribe{grid-template-columns:1fr}
+  .demo-subscribe input,.demo-subscribe button{width:100%;min-height:50px}
   .footer-inner{grid-template-columns:1fr;gap:30px}
   .footer-links{grid-template-columns:1fr 1fr}
   .footer-bottom{display:block}
   .footer-bottom span{display:block;margin:5px 0}
 }
-@media(max-width:430px){.footer-links{grid-template-columns:1fr}.newsletter-band h2{font-size:40px}}
-</style><!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Studio Nia</title><div class=wrap><header class=nav><div class=logo>studio nia</div><nav><a>SERVICES</a><a>BOOK</a><a>ABOUT</a></nav></header><section class=hero><div class=copy><small>BEAUTY · WELLNESS · LAGOS</small><h1>Your softest <em>reset.</em></h1><p>Hair, skin and beauty rituals designed around how you want to feel.</p><a class=button href="#book">Book an appointment →</a></div><div class=photo></div></section><section class=services id=services><small>THE MENU</small><h2 style="font:48px Georgia">Rituals, not rush jobs.</h2><div class=grid><div class=service><b>01<br>Signature Hair</b><p>Cut, styling and finish.</p></div><div class=service><b>02<br>Glow Facial</b><p>Deep cleanse and hydration.</p></div><div class=service><b>03<br>Gel Manicure</b><p>Clean, simple, polished.</p></div><div class=service><b>04<br>Bridal Trial</b><p>A calm rehearsal for your day.</p></div></div></section><section class=book id=book><div><small>APPOINTMENTS</small><h2>Let's find your time.</h2></div><form onsubmit="event.preventDefault();alert('Appointment request sent!')"><input placeholder="Your name" required><select required><option value="">Service</option><option>Signature Hair</option><option>Glow Facial</option><option>Gel Manicure</option></select><input type=date required><button>Request appointment</button></form></section></div>
+@media(max-width:430px){
+  .demo-newsletter h2{font-size:39px}
+  .footer-links{grid-template-columns:1fr}
+}
+
+@media(max-width:700px){
+ .footer-inner{grid-template-columns:1fr;gap:30px}
+ .footer-links{grid-template-columns:1fr 1fr}
+ .footer-bottom{display:block}.footer-bottom span{display:block;margin:5px 0}
+}
+@media(max-width:430px){.footer-links{grid-template-columns:1fr}}
+html,body{max-width:100%;overflow-x:hidden}
+*{box-sizing:border-box}body{margin:0;background:#fbf7f2;color:#292321;font-family:Arial}.wrap{width:min(1160px,92%);margin:auto}.nav{padding:24px 0;display:flex;justify-content:space-between}.logo{font:26px Georgia}.nav a{margin-left:20px;font-size:12px}.hero{display:grid;grid-template-columns:.9fr 1.1fr;min-height:650px}.copy{display:flex;flex-direction:column;justify-content:center;padding-right:50px}.copy h1{font:400 clamp(65px,8vw,110px)/.82 Georgia;margin:20px 0}.copy h1 em{color:#b66e68}.copy p{color:#766e69;max-width:480px;font-size:17px}.button{display:inline-block;background:#292321;color:white;padding:14px 20px;border-radius:99px;width:max-content;margin-top:12px}.photo{background:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85') center/cover;border-radius:280px 280px 20px 20px}.services{padding:90px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr)}.service{padding:25px;border-top:1px solid #ccc;border-right:1px solid #ccc}.service b{font:23px Georgia}.book{margin:50px 0;background:#f2dfda;border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.book h2{font:45px Georgia}.book form{display:grid;gap:10px}.book input,.book select,.book button{padding:14px;border:1px solid #c8b8b2;border-radius:7px}.book button{background:#292321;color:#fff}@media(max-width:750px){.hero,.book{grid-template-columns:1fr}.photo{min-height:450px}.copy{padding:60px 0}.grid{grid-template-columns:1fr 1fr}.nav nav{display:none}}@media(max-width:450px){.grid{grid-template-columns:1fr}}
+</style><div class=wrap><header class=nav><div class=logo>studio nia</div><nav><a>SERVICES</a><a>BOOK</a><a>ABOUT</a></nav></header><section class=hero><div class=copy><small>BEAUTY · WELLNESS · LAGOS</small><h1>Your softest <em>reset.</em></h1><p>Hair, skin and beauty rituals designed around how you want to feel.</p><a class=button href="#book">Book an appointment →</a></div><div class=photo></div></section><section class=services id=services><small>THE MENU</small><h2 style="font:48px Georgia">Rituals, not rush jobs.</h2><div class=grid><div class=service><b>01<br>Signature Hair</b><p>Cut, styling and finish.</p></div><div class=service><b>02<br>Glow Facial</b><p>Deep cleanse and hydration.</p></div><div class=service><b>03<br>Gel Manicure</b><p>Clean, simple, polished.</p></div><div class=service><b>04<br>Bridal Trial</b><p>A calm rehearsal for your day.</p></div></div></section><section class=book id=book><div><small>APPOINTMENTS</small><h2>Let's find your time.</h2></div><form onsubmit="event.preventDefault();alert('Appointment request sent!')"><input placeholder="Your name" required><select required><option value="">Service</option><option>Signature Hair</option><option>Glow Facial</option><option>Gel Manicure</option></select><input type=date required><button>Request appointment</button></form></section></div>
 
 
-<footer class="site-footer" style="--footer-accent: #b98774">
-  <section class="newsletter-band">
+<footer class="site-footer" style="--footer-accent:#b98774">
+  <section class="demo-newsletter">
     <div>
       <div class="kicker">Stay in the loop</div>
       <h2>Good things worth hearing about.</h2>
     </div>
     <div>
       <p>Occasional updates, new work and useful ideas. No inbox clutter.</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='You’re on the list ✓';">
+      <form class="demo-subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';">
         <input type="email" placeholder="Your email address" aria-label="Email address" required>
         <button type="submit">Subscribe</button>
       </form>

@@ -1,33 +1,32 @@
-<style>
+<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Ember & Plate</title><style>
 .site-footer{
-  margin-top:90px;background:#171717;color:#fff;padding:0;
-  overflow:hidden;
+  margin-top:90px;background:#171717;color:#fff;padding:0;overflow:hidden
 }
-.newsletter-band{
-  width:min(1100px,92%);margin:auto;padding:55px 0 48px;
-  display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:end;
+.demo-newsletter{
+  width:min(1100px,92%);margin:auto;padding:52px 0 45px;
+  display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end
 }
-.newsletter-band .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
-.newsletter-band h2{font:600 clamp(38px,6vw,72px)/.9 "Space Grotesk",Arial,sans-serif;letter-spacing:-.055em;margin:12px 0 0;max-width:700px}
-.newsletter-band p{color:#aaa;max-width:390px;margin:0 0 15px}
-.newsletter-form{display:flex;gap:8px;align-items:stretch}
-.newsletter-form input{
-  flex:1;min-width:0;background:#242424;border:1px solid #3b3b3b;color:#fff;
-  padding:15px 16px;border-radius:10px;outline:none;
+.demo-newsletter .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.58}
+.demo-newsletter h2{font:600 clamp(36px,6vw,68px)/.9 "Space Grotesk";letter-spacing:-.055em;margin:10px 0 0;max-width:650px}
+.demo-newsletter p{color:#a2a2a2;max-width:400px;margin:0 0 14px}
+.demo-subscribe{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.demo-subscribe input{
+  min-width:0;width:100%;background:#242424;border:1px solid #3a3a3a;color:#fff;
+  padding:14px 15px;border-radius:9px;outline:none
 }
-.newsletter-form input::placeholder{color:#777}
-.newsletter-form button{
-  border:0;padding:15px 18px;border-radius:10px;background:var(--footer-accent,#d47755);
-  color:#fff;font-weight:800;white-space:nowrap;cursor:pointer;
+.demo-subscribe input::placeholder{color:#777}
+.demo-subscribe button{
+  border:0;padding:14px 17px;border-radius:9px;background:#c97858;
+  color:#fff;font-weight:800;white-space:nowrap
 }
 .footer-inner{
   width:min(1100px,92%);margin:auto;border-top:1px solid #303030;
-  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0;
+  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0
 }
 .footer-brand strong{font-size:28px;letter-spacing:-.04em}
 .footer-brand p{color:#aaa;max-width:300px}
 .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.footer-links b{display:block;margin-bottom:13px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.footer-links b{display:block;margin-bottom:13px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .footer-links a,.footer-links p{display:block;color:#999;font-size:13px;margin:8px 0}
 .footer-links a:hover{color:#fff}
 .footer-bottom{
@@ -35,17 +34,38 @@
   padding:20px 0;display:flex;justify-content:space-between;color:#777;font-size:12px
 }
 @media(max-width:700px){
-  .newsletter-band{grid-template-columns:1fr;gap:24px;padding:42px 0}
-  .newsletter-band h2{font-size:48px}
-  .newsletter-form{display:grid;grid-template-columns:1fr}
-  .newsletter-form input,.newsletter-form button{width:100%;min-height:50px}
+  .demo-newsletter{grid-template-columns:1fr;gap:22px;padding:40px 0}
+  .demo-newsletter h2{font-size:48px}
+  .demo-subscribe{grid-template-columns:1fr}
+  .demo-subscribe input,.demo-subscribe button{width:100%;min-height:50px}
   .footer-inner{grid-template-columns:1fr;gap:30px}
   .footer-links{grid-template-columns:1fr 1fr}
   .footer-bottom{display:block}
   .footer-bottom span{display:block;margin:5px 0}
 }
-@media(max-width:430px){.footer-links{grid-template-columns:1fr}.newsletter-band h2{font-size:40px}}
-</style><!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Ember & Plate</title><div class=wrap><header class=nav><b>EMBER & PLATE</b><nav><a>MENU</a><a>RESERVE</a><a>OUR STORY</a></nav></header></div><section class=hero><div><small>MODERN NIGERIAN KITCHEN · LAGOS</small><h1>Come hungry.<br>Leave glowing.</h1><p>Fire, spice and familiar ingredients turned into an evening worth remembering.</p></div></section><main class=wrap><section class=menu id=menu>
+@media(max-width:430px){
+  .demo-newsletter h2{font-size:39px}
+  .footer-links{grid-template-columns:1fr}
+}
+
+@media(max-width:700px){
+ .footer-inner{grid-template-columns:1fr;gap:30px}
+ .footer-links{grid-template-columns:1fr 1fr}
+ .footer-bottom{display:block}.footer-bottom span{display:block;margin:5px 0}
+}
+@media(max-width:430px){.footer-links{grid-template-columns:1fr}}
+html,body{max-width:100%;overflow-x:hidden}
+*{box-sizing:border-box}body{margin:0;background:#f6efdd;color:#241914;font-family:Georgia}.wrap{width:min(1100px,92%);margin:auto}.nav{padding:25px 0;display:flex;justify-content:space-between}.nav a{font:12px Arial;margin-left:20px}.hero{min-height:650px;background:linear-gradient(0deg,#170d0bcc,#0000),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;display:flex;align-items:end;padding:55px}.hero h1{font-size:clamp(60px,9vw,125px);line-height:.8;margin:12px 0}.hero p{font:18px Arial;max-width:550px}.menu{padding:90px 0}.items{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}.item{padding:20px 0;border-bottom:1px solid #c9bda8;display:flex;justify-content:space-between}.item h3{margin:0}.item p{font:13px Arial;color:#6d625a}.reserve{background:#241914;color:#fff;border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.reserve h2{font-size:55px;margin:0}.reserve form{display:grid;gap:10px}.reserve input,.reserve select,.reserve button{padding:14px;border:0;border-radius:7px}.reserve button{background:#c84b32;color:white;font-weight:bold}@media(max-width:700px){.nav nav{display:none}.items,.reserve{grid-template-columns:1fr}.hero{padding:25px}.hero h1{font-size:65px}}
+
+.menu-tabs{position:sticky;top:0;z-index:5;background:#f6efdd;border-bottom:1px solid #c9bda8;padding:12px 0;margin:25px 0 45px;display:flex;gap:10px;overflow:auto}
+.menu-tabs a{white-space:nowrap;border:1px solid #bfb2a0;border-radius:999px;padding:9px 14px;font:12px Arial}
+.menu-tabs a:hover{background:#241914;color:#fff}
+.category{scroll-margin-top:90px;margin:55px 0}
+.category>h3{font:14px Arial;letter-spacing:.12em;text-transform:uppercase;color:#8b3c2b}
+.items{grid-template-columns:1fr 1fr}
+@media(max-width:700px){.items{grid-template-columns:1fr}}
+.site-footer{margin-top:90px}
+</style><div class=wrap><header class=nav><b>EMBER & PLATE</b><nav><a>MENU</a><a>RESERVE</a><a>OUR STORY</a></nav></header></div><section class=hero><div><small>MODERN NIGERIAN KITCHEN · LAGOS</small><h1>Come hungry.<br>Leave glowing.</h1><p>Fire, spice and familiar ingredients turned into an evening worth remembering.</p></div></section><main class=wrap><section class=menu id=menu>
 <h2 style="font-size:48px">Tonight's table</h2>
 <div class=menu-tabs>
   <a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#sides">Sides</a><a href="#desserts">Desserts</a><a href="#drinks">Drinks</a>
@@ -78,15 +98,15 @@
 </section></section><section id=story style="padding:30px 0 70px"><small>OUR STORY</small><h2 style="font-size:42px;max-width:760px">A Lagos kitchen built around smoke, spice and the comfort of a familiar table.</h2><p style="font:16px Arial;color:#6d625a;max-width:680px">Ember & Plate brings familiar Nigerian ingredients into a modern evening format — generous food, warm service and a room made for lingering.</p></section><section class=reserve id=reserve><div><small>YOUR TABLE</small><h2>Make an evening of it.</h2><p style="font:16px Arial;color:#ccc">Choose a date and party size.</p></div><form onsubmit="event.preventDefault();alert('Reservation request received!')"><input placeholder="Your name" required><input type=date required><select required><option value="">Guests</option><option>2</option><option>4</option><option>6</option></select><button>Request a table</button></form></section></main>
 
 
-<footer class="site-footer" style="--footer-accent: #b75b43">
-  <section class="newsletter-band">
+<footer class="site-footer" style="--footer-accent:#b75b43">
+  <section class="demo-newsletter">
     <div>
       <div class="kicker">Stay in the loop</div>
       <h2>Good things worth hearing about.</h2>
     </div>
     <div>
       <p>Occasional updates, new work and useful ideas. No inbox clutter.</p>
-      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='You’re on the list ✓';">
+      <form class="demo-subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';">
         <input type="email" placeholder="Your email address" aria-label="Email address" required>
         <button type="submit">Subscribe</button>
       </form>
