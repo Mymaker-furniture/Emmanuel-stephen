@@ -32,7 +32,7 @@ button,input,textarea{font:inherit}
 .hero{padding:90px 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
 .eyebrow{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#667000;font-weight:800}
 .hero h1{font:700 clamp(3.6rem,8vw,7.7rem)/.88 "Space Grotesk";letter-spacing:-.065em;margin:20px 0}
-.hero h1 em{font-style:normal;background:var(--accent);padding:0 .08em}
+.hero h1 em{font-style:normal;background:none!important;padding:0!important;color:var(--accent-dark);box-decoration-break:initial;-webkit-box-decoration-break:initial}
 .hero p{color:var(--muted);max-width:590px;font-size:1.08rem}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .btn{padding:13px 18px;border:1px solid #cfcfc7;border-radius:9px;font-weight:700;background:#fff}
@@ -134,14 +134,7 @@ button,a,input,textarea,select{max-width:100%}
 @media(max-width:700px){.newsletter .subscribe{width:100%}.footgrid a{padding:3px 0}}
 
 /* V5: keep the hero highlight attached to the heading — never a floating box */
-.reason-highlight{
-  display:inline;
-  color:#111;
-  background:linear-gradient(transparent 12%, var(--accent) 12%, var(--accent) 88%, transparent 88%);
-  padding:.02em .08em;
-  box-decoration-break:clone;
-  -webkit-box-decoration-break:clone;
-}
+
 .hero h1{max-width:100%}
 
 /* V5 newsletter: same rich visual character, but properly sized on mobile */
@@ -173,3 +166,6 @@ button,a,input,textarea,select{max-width:100%}
   .subscribe{grid-template-columns:1fr}
   .subscribe input,.subscribe button{width:100%;min-height:50px}
 }
+
+/* V6 — the word "reason" is typographic, never a floating rectangle */
+.hero h1 em{display:inline;background:transparent!important;box-shadow:none!important}

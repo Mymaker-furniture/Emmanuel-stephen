@@ -1,27 +1,47 @@
 <!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Forge Fitness</title><style>
+
+html,body{max-width:100%;overflow-x:hidden}
+*{box-sizing:border-box}body{margin:0;background:#090909;color:#f4f4f0;font-family:Arial}.wrap{width:min(1200px,92%);margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.nav b{font:900 22px Impact}.nav a{margin-left:20px;font-size:11px}.hero{min-height:690px;background:linear-gradient(90deg,#000d,#0000),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:end;padding:55px}.lime{color:#f0643c}.hero h1{font:900 clamp(70px,11vw,150px)/.75 Impact;margin:15px 0}.btn{display:inline-block;background:#f0643c;color:#000;padding:15px 20px;font-weight:900}.schedule{padding:90px 0}.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.class{background:#171717;padding:25px;min-height:190px;border-left:3px solid #f0643c}.class b{font-size:20px}.join{background:#f0643c;color:#090909;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.join h2{font:900 75px Impact;margin:0}.join form{display:grid;gap:10px}.join input,.join select,.join button{padding:14px;border:0}.join button{background:#000;color:#fff;font-weight:bold}@media(max-width:750px){.nav nav{display:none}.classes,.join{grid-template-columns:1fr 1fr}.hero{padding:25px}.hero h1{font-size:80px}}@media(max-width:500px){.classes,.join{grid-template-columns:1fr}}
+
+.class{position:relative;overflow:hidden;background-size:cover;background-position:center}
+.class:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.82))}
+.class>*{position:relative;z-index:1}
+.class:nth-child(1){background-image:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85")}
+.class:nth-child(2){background-image:url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85")}
+.class:nth-child(3){background-image:url("https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=900&q=85")}
+.class:nth-child(4){background-image:url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85")}
+
 .site-footer{
-  margin-top:90px;background:#171717;color:#fff;padding:0;overflow:hidden
+  margin-top:90px;background:#171717;color:#fff;overflow:hidden;
 }
 .demo-newsletter{
-  width:min(1100px,92%);margin:auto;padding:52px 0 45px;
-  display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end
+  width:min(1100px,92%);margin:auto;padding:58px 0 50px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:end;
+  border-bottom:1px solid #303030;
 }
-.demo-newsletter .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.58}
-.demo-newsletter h2{font:600 clamp(36px,6vw,68px)/.9 "Space Grotesk";letter-spacing:-.055em;margin:10px 0 0;max-width:650px}
-.demo-newsletter p{color:#a2a2a2;max-width:400px;margin:0 0 14px}
-.demo-subscribe{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.demo-newsletter .kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
+.demo-newsletter h2{
+  font:600 clamp(38px,6vw,70px)/.9 "Space Grotesk";letter-spacing:-.055em;
+  margin:10px 0 0;max-width:650px;
+}
+.demo-newsletter p{color:#999;max-width:390px;margin:0 0 18px}
+.demo-subscribe{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;
+  width:100%;border-bottom:1px solid #5a5a5a;padding-bottom:7px;
+}
 .demo-subscribe input{
-  min-width:0;width:100%;background:#242424;border:1px solid #3a3a3a;color:#fff;
-  padding:14px 15px;border-radius:9px;outline:none
+  min-width:0;width:100%;background:transparent;color:#fff;border:0;
+  outline:none;padding:12px 0;font-size:15px;
 }
 .demo-subscribe input::placeholder{color:#777}
 .demo-subscribe button{
-  border:0;padding:14px 17px;border-radius:9px;background:#c97858;
-  color:#fff;font-weight:800;white-space:nowrap
+  border:0;background:transparent;color:#fff;padding:12px 0 12px 18px;
+  font-weight:800;white-space:nowrap;cursor:pointer;
 }
+.demo-subscribe button:hover{color:#c97858}
 .footer-inner{
-  width:min(1100px,92%);margin:auto;border-top:1px solid #303030;
-  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0
+  width:min(1100px,92%);margin:auto;
+  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0;
 }
 .footer-brand strong{font-size:28px;letter-spacing:-.04em}
 .footer-brand p{color:#aaa;max-width:300px}
@@ -34,10 +54,10 @@
   padding:20px 0;display:flex;justify-content:space-between;color:#777;font-size:12px
 }
 @media(max-width:700px){
-  .demo-newsletter{grid-template-columns:1fr;gap:22px;padding:40px 0}
-  .demo-newsletter h2{font-size:48px}
-  .demo-subscribe{grid-template-columns:1fr}
-  .demo-subscribe input,.demo-subscribe button{width:100%;min-height:50px}
+  .demo-newsletter{grid-template-columns:1fr;gap:24px;padding:42px 0 38px}
+  .demo-newsletter h2{font-size:47px}
+  .demo-subscribe{grid-template-columns:minmax(0,1fr) auto}
+  .demo-subscribe input,.demo-subscribe button{min-height:48px}
   .footer-inner{grid-template-columns:1fr;gap:30px}
   .footer-links{grid-template-columns:1fr 1fr}
   .footer-bottom{display:block}
@@ -45,27 +65,18 @@
 }
 @media(max-width:430px){
   .demo-newsletter h2{font-size:39px}
+  .demo-subscribe{grid-template-columns:1fr}
+  .demo-subscribe button{text-align:left;padding:7px 0 5px}
   .footer-links{grid-template-columns:1fr}
 }
-
-@media(max-width:700px){
- .footer-inner{grid-template-columns:1fr;gap:30px}
- .footer-links{grid-template-columns:1fr 1fr}
- .footer-bottom{display:block}.footer-bottom span{display:block;margin:5px 0}
-}
-@media(max-width:430px){.footer-links{grid-template-columns:1fr}}
-html,body{max-width:100%;overflow-x:hidden}
-*{box-sizing:border-box}body{margin:0;background:#090909;color:#f4f4f0;font-family:Arial}.wrap{width:min(1200px,92%);margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.nav b{font:900 22px Impact}.nav a{margin-left:20px;font-size:11px}.hero{min-height:690px;background:linear-gradient(90deg,#000d,#0000),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85') center/cover;display:flex;align-items:end;padding:55px}.lime{color:#f0643c}.hero h1{font:900 clamp(70px,11vw,150px)/.75 Impact;margin:15px 0}.btn{display:inline-block;background:#f0643c;color:#000;padding:15px 20px;font-weight:900}.schedule{padding:90px 0}.classes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.class{background:#171717;padding:25px;min-height:190px;border-left:3px solid #f0643c}.class b{font-size:20px}.join{background:#f0643c;color:#090909;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.join h2{font:900 75px Impact;margin:0}.join form{display:grid;gap:10px}.join input,.join select,.join button{padding:14px;border:0}.join button{background:#000;color:#fff;font-weight:bold}@media(max-width:750px){.nav nav{display:none}.classes,.join{grid-template-columns:1fr 1fr}.hero{padding:25px}.hero h1{font-size:80px}}@media(max-width:500px){.classes,.join{grid-template-columns:1fr}}
-
-.class{position:relative;overflow:hidden;background-size:cover;background-position:center}
-.class:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.82))}
-.class>*{position:relative;z-index:1}
-.class:nth-child(1){background-image:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85")}
-.class:nth-child(2){background-image:url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85")}
-.class:nth-child(3){background-image:url("https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=900&q=85")}
-.class:nth-child(4){background-image:url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85")}
 </style><div class=wrap><header class=nav><b>FORGE / FITNESS</b><nav><a>CLASSES</a><a>COACHES</a><a>JOIN</a></nav></header></div><section class=hero><div class=wrap><div class=lime><b>NO EXCUSES · JUST TRAINING</b></div><h1>BUILT<br>NOT BORN.</h1><p style="max-width:520px">A performance gym for structured training, serious coaching and measurable progress.</p><a class=btn href="#join">START TRAINING →</a></div></section><main class=wrap><section class=schedule id=classes><div class=lime>THIS WEEK</div><h2 style="font-size:45px">Train on your terms.</h2><div class=classes><div class=class><b>MON · 6PM</b><p>Strength Lab</p><small>Coach Dami</small></div><div class=class><b>TUE · 7PM</b><p>Conditioning</p><small>Coach Tobi</small></div><div class=class><b>THU · 6PM</b><p>Power Hour</p><small>Coach Jay</small></div><div class=class><b>SAT · 9AM</b><p>Full Body</p><small>Coach Dami</small></div></div></section><section class=join id=join><div><div><b>FIRST SESSION</b></div><h2>READY?</h2><p>Request a tour and this demo will simulate the membership flow.</p></div><form onsubmit="event.preventDefault();alert('Membership enquiry received!')"><input placeholder="Name" required><input placeholder="Email" type=email required><select required><option value="">Goal</option><option>Strength</option><option>Fitness</option></select><button>REQUEST A TOUR</button></form></section></main>
 
+
+
+
+<style>
+a,a:hover,a:focus,a:visited{text-decoration:none!important}
+</style>
 
 <footer class="site-footer" style="--footer-accent:#f0643c">
   <section class="demo-newsletter">
@@ -77,7 +88,7 @@ html,body{max-width:100%;overflow-x:hidden}
       <p>Occasional updates, new work and useful ideas. No inbox clutter.</p>
       <form class="demo-subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';">
         <input type="email" placeholder="Your email address" aria-label="Email address" required>
-        <button type="submit">Subscribe</button>
+        <button type="submit">Subscribe →</button>
       </form>
     </div>
   </section>
@@ -89,7 +100,7 @@ html,body{max-width:100%;overflow-x:hidden}
     <div class="footer-links">
       <div><b>Explore</b><a href="#top">Back to top ↑</a><a href="#top">Our story</a><a href="#top">Services</a></div>
       <div><b>Contact</b><a href="mailto:hello@example.com">Email us</a><a href="#top">Book / enquire</a></div>
-      <div><b>Visit</b><p>Mon–Sat<br>10:00–22:00</p></div>
+      <div><b>Availability</b><p>Open for projects<br>Worldwide</p></div>
     </div>
   </div>
   <div class="footer-bottom">

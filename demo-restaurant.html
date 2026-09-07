@@ -1,27 +1,48 @@
 <!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Ember & Plate</title><style>
+
+html,body{max-width:100%;overflow-x:hidden}
+*{box-sizing:border-box}body{margin:0;background:#f6efdd;color:#241914;font-family:Georgia}.wrap{width:min(1100px,92%);margin:auto}.nav{padding:25px 0;display:flex;justify-content:space-between}.nav a{font:12px Arial;margin-left:20px}.hero{min-height:650px;background:linear-gradient(0deg,#170d0bcc,#0000),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;display:flex;align-items:end;padding:55px}.hero h1{font-size:clamp(60px,9vw,125px);line-height:.8;margin:12px 0}.hero p{font:18px Arial;max-width:550px}.menu{padding:90px 0}.items{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}.item{padding:20px 0;border-bottom:1px solid #c9bda8;display:flex;justify-content:space-between}.item h3{margin:0}.item p{font:13px Arial;color:#6d625a}.reserve{background:#241914;color:#fff;border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.reserve h2{font-size:55px;margin:0}.reserve form{display:grid;gap:10px}.reserve input,.reserve select,.reserve button{padding:14px;border:0;border-radius:7px}.reserve button{background:#c84b32;color:white;font-weight:bold}@media(max-width:700px){.nav nav{display:none}.items,.reserve{grid-template-columns:1fr}.hero{padding:25px}.hero h1{font-size:65px}}
+
+.menu-tabs{position:sticky;top:0;z-index:5;background:#f6efdd;border-bottom:1px solid #c9bda8;padding:12px 0;margin:25px 0 45px;display:flex;gap:10px;overflow:auto}
+.menu-tabs a{white-space:nowrap;border:1px solid #bfb2a0;border-radius:999px;padding:9px 14px;font:12px Arial}
+.menu-tabs a:hover{background:#241914;color:#fff}
+.category{scroll-margin-top:90px;margin:55px 0}
+.category>h3{font:14px Arial;letter-spacing:.12em;text-transform:uppercase;color:#8b3c2b}
+.items{grid-template-columns:1fr 1fr}
+@media(max-width:700px){.items{grid-template-columns:1fr}}
+.site-footer{margin-top:90px}
+
 .site-footer{
-  margin-top:90px;background:#171717;color:#fff;padding:0;overflow:hidden
+  margin-top:90px;background:#171717;color:#fff;overflow:hidden;
 }
 .demo-newsletter{
-  width:min(1100px,92%);margin:auto;padding:52px 0 45px;
-  display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end
+  width:min(1100px,92%);margin:auto;padding:58px 0 50px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:end;
+  border-bottom:1px solid #303030;
 }
-.demo-newsletter .kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.58}
-.demo-newsletter h2{font:600 clamp(36px,6vw,68px)/.9 "Space Grotesk";letter-spacing:-.055em;margin:10px 0 0;max-width:650px}
-.demo-newsletter p{color:#a2a2a2;max-width:400px;margin:0 0 14px}
-.demo-subscribe{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.demo-newsletter .kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
+.demo-newsletter h2{
+  font:600 clamp(38px,6vw,70px)/.9 "Space Grotesk";letter-spacing:-.055em;
+  margin:10px 0 0;max-width:650px;
+}
+.demo-newsletter p{color:#999;max-width:390px;margin:0 0 18px}
+.demo-subscribe{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;
+  width:100%;border-bottom:1px solid #5a5a5a;padding-bottom:7px;
+}
 .demo-subscribe input{
-  min-width:0;width:100%;background:#242424;border:1px solid #3a3a3a;color:#fff;
-  padding:14px 15px;border-radius:9px;outline:none
+  min-width:0;width:100%;background:transparent;color:#fff;border:0;
+  outline:none;padding:12px 0;font-size:15px;
 }
 .demo-subscribe input::placeholder{color:#777}
 .demo-subscribe button{
-  border:0;padding:14px 17px;border-radius:9px;background:#c97858;
-  color:#fff;font-weight:800;white-space:nowrap
+  border:0;background:transparent;color:#fff;padding:12px 0 12px 18px;
+  font-weight:800;white-space:nowrap;cursor:pointer;
 }
+.demo-subscribe button:hover{color:#c97858}
 .footer-inner{
-  width:min(1100px,92%);margin:auto;border-top:1px solid #303030;
-  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0
+  width:min(1100px,92%);margin:auto;
+  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0;
 }
 .footer-brand strong{font-size:28px;letter-spacing:-.04em}
 .footer-brand p{color:#aaa;max-width:300px}
@@ -34,10 +55,10 @@
   padding:20px 0;display:flex;justify-content:space-between;color:#777;font-size:12px
 }
 @media(max-width:700px){
-  .demo-newsletter{grid-template-columns:1fr;gap:22px;padding:40px 0}
-  .demo-newsletter h2{font-size:48px}
-  .demo-subscribe{grid-template-columns:1fr}
-  .demo-subscribe input,.demo-subscribe button{width:100%;min-height:50px}
+  .demo-newsletter{grid-template-columns:1fr;gap:24px;padding:42px 0 38px}
+  .demo-newsletter h2{font-size:47px}
+  .demo-subscribe{grid-template-columns:minmax(0,1fr) auto}
+  .demo-subscribe input,.demo-subscribe button{min-height:48px}
   .footer-inner{grid-template-columns:1fr;gap:30px}
   .footer-links{grid-template-columns:1fr 1fr}
   .footer-bottom{display:block}
@@ -45,58 +66,48 @@
 }
 @media(max-width:430px){
   .demo-newsletter h2{font-size:39px}
+  .demo-subscribe{grid-template-columns:1fr}
+  .demo-subscribe button{text-align:left;padding:7px 0 5px}
   .footer-links{grid-template-columns:1fr}
 }
-
-@media(max-width:700px){
- .footer-inner{grid-template-columns:1fr;gap:30px}
- .footer-links{grid-template-columns:1fr 1fr}
- .footer-bottom{display:block}.footer-bottom span{display:block;margin:5px 0}
-}
-@media(max-width:430px){.footer-links{grid-template-columns:1fr}}
-html,body{max-width:100%;overflow-x:hidden}
-*{box-sizing:border-box}body{margin:0;background:#f6efdd;color:#241914;font-family:Georgia}.wrap{width:min(1100px,92%);margin:auto}.nav{padding:25px 0;display:flex;justify-content:space-between}.nav a{font:12px Arial;margin-left:20px}.hero{min-height:650px;background:linear-gradient(0deg,#170d0bcc,#0000),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;display:flex;align-items:end;padding:55px}.hero h1{font-size:clamp(60px,9vw,125px);line-height:.8;margin:12px 0}.hero p{font:18px Arial;max-width:550px}.menu{padding:90px 0}.items{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}.item{padding:20px 0;border-bottom:1px solid #c9bda8;display:flex;justify-content:space-between}.item h3{margin:0}.item p{font:13px Arial;color:#6d625a}.reserve{background:#241914;color:#fff;border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.reserve h2{font-size:55px;margin:0}.reserve form{display:grid;gap:10px}.reserve input,.reserve select,.reserve button{padding:14px;border:0;border-radius:7px}.reserve button{background:#c84b32;color:white;font-weight:bold}@media(max-width:700px){.nav nav{display:none}.items,.reserve{grid-template-columns:1fr}.hero{padding:25px}.hero h1{font-size:65px}}
-
-.menu-tabs{position:sticky;top:0;z-index:5;background:#f6efdd;border-bottom:1px solid #c9bda8;padding:12px 0;margin:25px 0 45px;display:flex;gap:10px;overflow:auto}
-.menu-tabs a{white-space:nowrap;border:1px solid #bfb2a0;border-radius:999px;padding:9px 14px;font:12px Arial}
-.menu-tabs a:hover{background:#241914;color:#fff}
-.category{scroll-margin-top:90px;margin:55px 0}
-.category>h3{font:14px Arial;letter-spacing:.12em;text-transform:uppercase;color:#8b3c2b}
-.items{grid-template-columns:1fr 1fr}
-@media(max-width:700px){.items{grid-template-columns:1fr}}
-.site-footer{margin-top:90px}
-</style><div class=wrap><header class=nav><b>EMBER & PLATE</b><nav><a>MENU</a><a>RESERVE</a><a>OUR STORY</a></nav></header></div><section class=hero><div><small>MODERN NIGERIAN KITCHEN · LAGOS</small><h1>Come hungry.<br>Leave glowing.</h1><p>Fire, spice and familiar ingredients turned into an evening worth remembering.</p></div></section><main class=wrap><section class=menu id=menu>
+</style><div class=wrap><header class=nav><b>EMBER & PLATE</b><nav><a>MENU</a><a>RESERVE</a><a>OUR STORY</a></nav></header></div><section class=hero><div><small>MODERN  KITCHEN</small><h1>Come hungry.<br>Leave glowing.</h1><p>Fire, spice and familiar ingredients turned into an evening worth remembering.</p></div></section><main class=wrap><section class=menu id=menu>
 <h2 style="font-size:48px">Tonight's table</h2>
 <div class=menu-tabs>
   <a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#sides">Sides</a><a href="#desserts">Desserts</a><a href="#drinks">Drinks</a>
 </div>
 <div class=category id=starters><h3>01 · Starters</h3><div class=items>
-<div class=item><div><h3>Suya Butter Prawns</h3><p>Charred prawns, lime, suya butter</p></div><b>$24</b></div>
-<div class=item><div><h3>Smoked Pepper Wings</h3><p>Fire-roasted pepper glaze, herbs</p></div><b>$18</b></div>
-<div class=item><div><h3>Plantain & Peanut Crunch</h3><p>Sweet plantain, toasted peanut, chilli</p></div><b>$12</b></div>
+<div class=item><div><h3>Suya Butter Prawns</h3><p>Charred prawns, lime, suya butter</p></div><b></b></div>
+<div class=item><div><h3>Smoked Pepper Wings</h3><p>Fire-roasted pepper glaze, herbs</p></div><b></b></div>
+<div class=item><div><h3>Plantain & Peanut Crunch</h3><p>Sweet plantain, toasted peanut, chilli</p></div><b></b></div>
 </div></div>
 <div class=category id=mains><h3>02 · Mains</h3><div class=items>
-<div class=item><div><h3>Smoked Jollof</h3><p>Fire-roasted tomato, plantain, herbs</p></div><b>$17</b></div>
-<div class=item><div><h3>Charred Sea Bass</h3><p>Coconut pepper sauce, greens, lime</p></div><b>$28</b></div>
-<div class=item><div><h3>Suya Short Rib</h3><p>Slow-cooked beef, onion relish, suya spice</p></div><b>$31</b></div>
-<div class=item><div><h3>Yam & Pepper Relish</h3><p>Crisped yam, roasted pepper, fresh herbs</p></div><b>$15</b></div>
+<div class=item><div><h3>Smoked Jollof</h3><p>Fire-roasted tomato, plantain, herbs</p></div><b></b></div>
+<div class=item><div><h3>Charred Sea Bass</h3><p>Coconut pepper sauce, greens, lime</p></div><b></b></div>
+<div class=item><div><h3>Suya Short Rib</h3><p>Slow-cooked beef, onion relish, suya spice</p></div><b></b></div>
+<div class=item><div><h3>Yam & Pepper Relish</h3><p>Crisped yam, roasted pepper, fresh herbs</p></div><b></b></div>
 </div></div>
 <div class=category id=sides><h3>03 · Sides</h3><div class=items>
-<div class=item><div><h3>Jollof Rice</h3><p>Smoked tomato rice, spring herbs</p></div><b>$7</b></div>
-<div class=item><div><h3>Charred Plantain</h3><p>Sweet plantain, sea salt</p></div><b>$6</b></div>
-<div class=item><div><h3>Pepper Greens</h3><p>Seasonal greens, garlic, chilli</p></div><b>$8</b></div>
+<div class=item><div><h3>Jollof Rice</h3><p>Smoked tomato rice, spring herbs</p></div><b></b></div>
+<div class=item><div><h3>Charred Plantain</h3><p>Sweet plantain, sea salt</p></div><b></b></div>
+<div class=item><div><h3>Pepper Greens</h3><p>Seasonal greens, garlic, chilli</p></div><b></b></div>
 </div></div>
 <div class=category id=desserts><h3>04 · Desserts</h3><div class=items>
-<div class=item><div><h3>Chocolate Puff-Puff</h3><p>Cocoa, sea salt, vanilla cream</p></div><b>$11</b></div>
-<div class=item><div><h3>Coconut Cream Cake</h3><p>Toasted coconut, citrus cream</p></div><b>$12</b></div>
+<div class=item><div><h3>Chocolate Puff-Puff</h3><p>Cocoa, sea salt, vanilla cream</p></div><b></b></div>
+<div class=item><div><h3>Coconut Cream Cake</h3><p>Toasted coconut, citrus cream</p></div><b></b></div>
 </div></div>
 <div class=category id=drinks><h3>05 · Drinks</h3><div class=items>
-<div class=item><div><h3>Ginger & Lime Cooler</h3><p>Fresh ginger, lime, mint</p></div><b>$7</b></div>
-<div class=item><div><h3>Hibiscus Spritz</h3><p>Hibiscus, citrus, sparkling water</p></div><b>$8</b></div>
-<div class=item><div><h3>House Lemonade</h3><p>Lemon, vanilla, fresh basil</p></div><b>$6</b></div>
+<div class=item><div><h3>Ginger & Lime Cooler</h3><p>Fresh ginger, lime, mint</p></div><b></b></div>
+<div class=item><div><h3>Hibiscus Spritz</h3><p>Hibiscus, citrus, sparkling water</p></div><b></b></div>
+<div class=item><div><h3>House Lemonade</h3><p>Lemon, vanilla, fresh basil</p></div><b></b></div>
 </div></div>
-</section></section><section id=story style="padding:30px 0 70px"><small>OUR STORY</small><h2 style="font-size:42px;max-width:760px">A Lagos kitchen built around smoke, spice and the comfort of a familiar table.</h2><p style="font:16px Arial;color:#6d625a;max-width:680px">Ember & Plate brings familiar Nigerian ingredients into a modern evening format — generous food, warm service and a room made for lingering.</p></section><section class=reserve id=reserve><div><small>YOUR TABLE</small><h2>Make an evening of it.</h2><p style="font:16px Arial;color:#ccc">Choose a date and party size.</p></div><form onsubmit="event.preventDefault();alert('Reservation request received!')"><input placeholder="Your name" required><input type=date required><select required><option value="">Guests</option><option>2</option><option>4</option><option>6</option></select><button>Request a table</button></form></section></main>
+</section></section><section id=story style="padding:30px 0 70px"><small>OUR STORY</small><h2 style="font-size:42px;max-width:760px">A  kitchen built around smoke, spice and the comfort of a familiar table.</h2><p style="font:16px Arial;color:#6d625a;max-width:680px">Ember & Plate brings familiar  ingredients into a modern evening format — generous food, warm service and a room made for lingering.</p></section><section class=reserve id=reserve><div><small>YOUR TABLE</small><h2>Make an evening of it.</h2><p style="font:16px Arial;color:#ccc">Choose a date and party size.</p></div><form onsubmit="event.preventDefault();alert('Reservation request received!')"><input placeholder="Your name" required><input type=date required><select required><option value="">Guests</option><option>2</option><option>4</option><option>6</option></select><button>Request a table</button></form></section></main>
 
+
+
+
+<style>
+a,a:hover,a:focus,a:visited{text-decoration:none!important}
+</style>
 
 <footer class="site-footer" style="--footer-accent:#b75b43">
   <section class="demo-newsletter">
@@ -108,19 +119,19 @@ html,body{max-width:100%;overflow-x:hidden}
       <p>Occasional updates, new work and useful ideas. No inbox clutter.</p>
       <form class="demo-subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';">
         <input type="email" placeholder="Your email address" aria-label="Email address" required>
-        <button type="submit">Subscribe</button>
+        <button type="submit">Subscribe →</button>
       </form>
     </div>
   </section>
   <div class="footer-inner">
     <div class="footer-brand">
       <strong>Ember & Plate</strong>
-      <p>Modern Nigerian kitchen — fire, spice and familiar ingredients.</p>
+      <p>A modern kitchen built around fire, spice and familiar ingredients.</p>
     </div>
     <div class="footer-links">
       <div><b>Explore</b><a href="#top">Back to top ↑</a><a href="#top">Our story</a><a href="#top">Services</a></div>
       <div><b>Contact</b><a href="mailto:hello@example.com">Email us</a><a href="#top">Book / enquire</a></div>
-      <div><b>Visit</b><p>Mon–Sat<br>10:00–22:00</p></div>
+      <div><b>Availability</b><p>Open for projects<br>Worldwide</p></div>
     </div>
   </div>
   <div class="footer-bottom">
