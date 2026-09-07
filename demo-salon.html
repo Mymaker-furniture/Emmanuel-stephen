@@ -61,7 +61,20 @@ html,body{max-width:100%;overflow-x:hidden}
   .demo-subscribe button{text-align:left;padding:7px 0 5px}
   .footer-links{grid-template-columns:1fr}
 }
-</style><div class=wrap><header class=nav><div class=logo>studio nia</div><nav><a>SERVICES</a><a>BOOK</a><a>ABOUT</a></nav></header><section class=hero><div class=copy><small>BEAUTY · WELLNESS</small><h1>Your softest <em>reset.</em></h1><p>Hair, skin and beauty rituals designed around how you want to feel.</p><a class=button href="#book">Book an appointment →</a></div><div class=photo></div></section><section class=services id=services><small>THE MENU</small><h2 style="font:48px Georgia">Rituals, not rush jobs.</h2><div class=grid><div class=service><b>01<br>Signature Hair</b><p>Cut, styling and finish.</p></div><div class=service><b>02<br>Glow Facial</b><p>Deep cleanse and hydration.</p></div><div class=service><b>03<br>Gel Manicure</b><p>Clean, simple, polished.</p></div><div class=service><b>04<br>Bridal Trial</b><p>A calm rehearsal for your day.</p></div></div></section><section class=book id=book><div><small>APPOINTMENTS</small><h2>Let's find your time.</h2></div><form onsubmit="event.preventDefault();alert('Appointment request sent!')"><input placeholder="Your name" required><select required><option value="">Service</option><option>Signature Hair</option><option>Glow Facial</option><option>Gel Manicure</option></select><input type=date required><button>Request appointment</button></form></section></div>
+<style>
+/* V7 functional mobile nav — keeps desktop design unchanged */
+.mobile-menu-toggle{display:none;border:1px solid currentColor;background:transparent;color:inherit;border-radius:999px;width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer}
+.mobile-nav-panel{display:none}
+@media(max-width:700px){
+ .nav{position:relative;align-items:center}
+ .nav nav{display:none!important}
+ .mobile-menu-toggle{display:grid;place-items:center}
+ .mobile-nav-panel{position:absolute;left:0;right:0;top:100%;z-index:100;background:inherit;border-top:1px solid rgba(127,127,127,.25);padding:10px 4%;box-shadow:0 18px 35px rgba(0,0,0,.12)}
+ .mobile-nav-panel.open{display:grid}
+ .mobile-nav-panel a{padding:14px 0;border-bottom:1px solid rgba(127,127,127,.22);font-size:13px;font-weight:700;text-decoration:none!important}
+ .mobile-nav-panel a:last-child{border-bottom:0}
+}
+</style></style><div class=wrap><header class="nav"><div class=logo>studio nia</div><nav><a href="#services">Services</a><a href="#book">Book</a><a href="#about">About</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#services">Services</a><a href="#book">Book</a><a href="#about">About</a></div></header><section class=hero><div class=copy><small>BEAUTY · WELLNESS</small><h1>Your softest <em>reset.</em></h1><p>Hair, skin and beauty rituals designed around how you want to feel.</p><a class=button href="#book">Book an appointment →</a></div><div class=photo></div></section><section class=services id=services><small>THE MENU</small><h2 style="font:48px Georgia">Rituals, not rush jobs.</h2><div class=grid><div class=service><b>01<br>Signature Hair</b><p>Cut, styling and finish.</p></div><div class=service><b>02<br>Glow Facial</b><p>Deep cleanse and hydration.</p></div><div class=service><b>03<br>Gel Manicure</b><p>Clean, simple, polished.</p></div><div class=service><b>04<br>Bridal Trial</b><p>A calm rehearsal for your day.</p></div></div></section><section class=book id=book><div><small>APPOINTMENTS</small><h2>Let's find your time.</h2></div><form onsubmit="event.preventDefault();alert('Appointment request sent!')"><input placeholder="Your name" required><select required><option value="">Service</option><option>Signature Hair</option><option>Glow Facial</option><option>Gel Manicure</option></select><input type=date required><button>Request appointment</button></form></section></div>
 
 
 
@@ -101,3 +114,26 @@ a,a:hover,a:focus,a:visited{text-decoration:none!important}
   </div>
 </footer>
 <script>document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())</script>
+<script>
+document.querySelectorAll('.mobile-menu-toggle').forEach(btn=>btn.addEventListener('click',()=>{
+ const panel=btn.parentElement.querySelector('.mobile-nav-panel');
+ const open=panel.classList.toggle('open'); btn.setAttribute('aria-expanded',open); btn.textContent=open?'×':'☰';
+ panel.querySelectorAll('a').forEach(a=>a.onclick=()=>{panel.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';});
+}));
+</script><style>a,a:hover,a:focus,a:visited{text-decoration:none!important}</style><style>
+/* V7 subscription control: rounded, compact, and contained on mobile */
+.demo-subscribe{
+  border:1px solid #4a4a4a!important;
+  border-bottom:1px solid #4a4a4a!important;
+  border-radius:16px!important;
+  padding:6px 8px 6px 14px!important;
+  overflow:hidden!important;
+  background:rgba(255,255,255,.025);
+}
+.demo-subscribe input{padding:10px 0!important}
+.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
+@media(max-width:430px){
+ .demo-subscribe{padding:7px 10px!important}
+ .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
+}
+</style>

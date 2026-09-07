@@ -169,3 +169,21 @@ button,a,input,textarea,select{max-width:100%}
 
 /* V6 — the word "reason" is typographic, never a floating rectangle */
 .hero h1 em{display:inline;background:transparent!important;box-shadow:none!important}
+
+/* V7 — functional mobile navigation */
+.mobile-menu-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:999px;width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer}
+.mobile-nav-panel{display:none}
+@media(max-width:700px){
+  .links{display:none}
+  .mobile-menu-toggle{display:grid;place-items:center}
+  .navin{min-height:68px}
+  .mobile-nav-panel{background:rgba(247,247,243,.98);border-top:1px solid var(--line);padding:12px 18px 18px}
+  .mobile-nav-panel.open{display:grid}
+  .mobile-nav-panel a{padding:14px 0;border-bottom:1px solid var(--line);font-weight:700}
+  .mobile-nav-panel a:last-child{border-bottom:0}
+}
+
+.subscribe{border:1px solid #d8d8d1;border-radius:16px;padding:6px;overflow:hidden}
+.subscribe input{border:0!important;border-radius:11px}
+.subscribe button{border-radius:11px}
+@media(max-width:600px){.subscribe{padding:7px}.subscribe input,.subscribe button{border-radius:11px}}

@@ -66,7 +66,20 @@ html,body{max-width:100%;overflow-x:hidden}
   .demo-subscribe button{text-align:left;padding:7px 0 5px}
   .footer-links{grid-template-columns:1fr}
 }
-</style><div class=wrap><header class=nav><b>SkillForge<span style="color:#6c4cff">.</span></b><nav><a>Courses</a><a>How it works</a><a>Sign in</a></nav></header><section class=hero><div><small>SKILLS FOR THE REAL WORLD</small><h1>Learn something.<br><span>Build something.</span></h1><p>Short, practical courses taught by people who actually use the skills at work.</p><a class=btn href="#courses">Explore courses</a></div><div class=learncard><small>YOUR LEARNING</small><h3>Build your first landing page</h3><p style="color:#777">HTML & CSS · 8 lessons</p><div class=progress><i></i></div><p>62% complete</p><button style="padding:12px;background:#17152a;color:#fff;border:0;border-radius:7px">Continue lesson →</button></div></section><section class=courses id=courses id=courses><h2 style="font-size:48px">Popular paths</h2><div class=grid><article class=course><div class="course-img"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Web development workspace"></div><div><small style="color:#6c4cff;font-weight:bold">WEB DEVELOPMENT</small><h3>Build websites from scratch</h3><p>Beginner · 12 lessons</p></div></article><article class=course><div class="course-img"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85" alt="Marketing strategy workshop"></div><div><small style="color:#6c4cff;font-weight:bold">BUSINESS</small><h3>Launch your first digital product</h3><p>Beginner · 9 lessons</p></div></article><article class=course><div class="course-img"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85" alt="Online learning workspace"></div><div><small style="color:#6c4cff;font-weight:bold">DESIGN</small><h3>Design interfaces people understand</h3><p>Intermediate · 14 lessons</p></div></article></div></section><section class=enroll><div><small>NO PRESSURE. JUST PROGRESS.</small><h2>Start with one skill.</h2></div><a href="#courses">View learning paths →</a></section></div>
+<style>
+/* V7 functional mobile nav — keeps desktop design unchanged */
+.mobile-menu-toggle{display:none;border:1px solid currentColor;background:transparent;color:inherit;border-radius:999px;width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer}
+.mobile-nav-panel{display:none}
+@media(max-width:700px){
+ .nav{position:relative;align-items:center}
+ .nav nav{display:none!important}
+ .mobile-menu-toggle{display:grid;place-items:center}
+ .mobile-nav-panel{position:absolute;left:0;right:0;top:100%;z-index:100;background:inherit;border-top:1px solid rgba(127,127,127,.25);padding:10px 4%;box-shadow:0 18px 35px rgba(0,0,0,.12)}
+ .mobile-nav-panel.open{display:grid}
+ .mobile-nav-panel a{padding:14px 0;border-bottom:1px solid rgba(127,127,127,.22);font-size:13px;font-weight:700;text-decoration:none!important}
+ .mobile-nav-panel a:last-child{border-bottom:0}
+}
+</style></style><div class=wrap><header class="nav"><b>SkillForge<span style="color:#6c4cff">.</span></b><nav><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#signin">Sign in</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#courses">Courses</a><a href="#how">How it works</a><a href="#signin">Sign in</a></div></header><section class=hero><div><small>SKILLS FOR THE REAL WORLD</small><h1>Learn something.<br><span>Build something.</span></h1><p>Short, practical courses taught by people who actually use the skills at work.</p><a class=btn href="#courses">Explore courses</a></div><div class=learncard><small>YOUR LEARNING</small><h3>Build your first landing page</h3><p style="color:#777">HTML & CSS · 8 lessons</p><div class=progress><i></i></div><p>62% complete</p><button style="padding:12px;background:#17152a;color:#fff;border:0;border-radius:7px">Continue lesson →</button></div></section><section class=courses id=courses id=courses><h2 style="font-size:48px">Popular paths</h2><div class=grid><article class=course><div class="course-img"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=85" alt="Web development workspace"></div><div><small style="color:#6c4cff;font-weight:bold">WEB DEVELOPMENT</small><h3>Build websites from scratch</h3><p>Beginner · 12 lessons</p></div></article><article class=course><div class="course-img"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85" alt="Marketing strategy workshop"></div><div><small style="color:#6c4cff;font-weight:bold">BUSINESS</small><h3>Launch your first digital product</h3><p>Beginner · 9 lessons</p></div></article><article class=course><div class="course-img"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85" alt="Online learning workspace"></div><div><small style="color:#6c4cff;font-weight:bold">DESIGN</small><h3>Design interfaces people understand</h3><p>Intermediate · 14 lessons</p></div></article></div></section><section class=enroll><div><small>NO PRESSURE. JUST PROGRESS.</small><h2>Start with one skill.</h2></div><a href="#courses">View learning paths →</a></section></div>
 
 
 
@@ -106,3 +119,26 @@ a,a:hover,a:focus,a:visited{text-decoration:none!important}
   </div>
 </footer>
 <script>document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())</script>
+<script>
+document.querySelectorAll('.mobile-menu-toggle').forEach(btn=>btn.addEventListener('click',()=>{
+ const panel=btn.parentElement.querySelector('.mobile-nav-panel');
+ const open=panel.classList.toggle('open'); btn.setAttribute('aria-expanded',open); btn.textContent=open?'×':'☰';
+ panel.querySelectorAll('a').forEach(a=>a.onclick=()=>{panel.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';});
+}));
+</script><style>a,a:hover,a:focus,a:visited{text-decoration:none!important}</style><style>
+/* V7 subscription control: rounded, compact, and contained on mobile */
+.demo-subscribe{
+  border:1px solid #4a4a4a!important;
+  border-bottom:1px solid #4a4a4a!important;
+  border-radius:16px!important;
+  padding:6px 8px 6px 14px!important;
+  overflow:hidden!important;
+  background:rgba(255,255,255,.025);
+}
+.demo-subscribe input{padding:10px 0!important}
+.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
+@media(max-width:430px){
+ .demo-subscribe{padding:7px 10px!important}
+ .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
+}
+</style>

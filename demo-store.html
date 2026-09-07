@@ -1,7 +1,14 @@
 <!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Nova Goods</title><style>
 
 html,body{max-width:100%;overflow-x:hidden}
-*{box-sizing:border-box}body{margin:0;background:#f5f1e9;color:#121212;font-family:Arial}.wrap{width:min(1220px,92%);margin:auto}.nav{padding:22px 0;border-bottom:1px solid #cfc8bb;display:flex;justify-content:space-between}.nav a{margin-left:18px;font-size:11px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:25px;padding:45px 0}.hero h1{font-size:clamp(60px,9vw,120px);line-height:.8;letter-spacing:-.08em;margin:10px 0}.hero p{color:#666;max-width:500px}.ticker{background:#ff5a1f;padding:13px;font-weight:900;white-space:nowrap;overflow:hidden}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:35px 0}.product{background:#fff;border-radius:15px;overflow:hidden;border:1px solid #e4dfd6}.pic{height:280px;overflow:hidden;background:#eee}.pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.product:hover .pic img{transform:scale(1.04)}.pic{height:280px;display:grid;place-items:center;font-size:65px}.product:nth-child(1) .pic{background:#ffb17c}.product:nth-child(2) .pic{background:#8aa7ff}.product:nth-child(3) .pic{background:#f4dd65}.product:nth-child(4) .pic{background:#d8b8ff}.info{padding:16px}.add{width:100%;padding:11px;background:#fff;border:1px solid #bbb;border-radius:7px}.cart{position:fixed;right:18px;bottom:18px;background:#111;color:#fff;border:0;border-radius:99px;padding:15px 20px}@media(max-width:800px){.hero{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}}@media(max-width:500px){.nav nav{display:none}.products{grid-template-columns:1fr 1fr}.pic{height:190px}}
+*{box-sizing:border-box}body{margin:0;background:#f5f1e9;color:#121212;font-family:Arial}.wrap{width:min(1220px,92%);margin:auto}.nav{padding:22px 0;border-bottom:1px solid #cfc8bb;display:flex;justify-content:space-between}.nav a{margin-left:18px;font-size:11px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:25px;padding:45px 0}.hero h1{font-size:clamp(60px,9vw,120px);line-height:.8;letter-spacing:-.08em;margin:10px 0}.hero p{color:#666;max-width:500px}.ticker{background:#ff5a1f;padding:13px;font-weight:900;white-space:nowrap;overflow:hidden}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:35px 0}.product{background:#fff;border-radius:15px;overflow:hidden;border:1px solid #e4dfd6}.pic{height:280px;overflow:hidden;background:#eee}.pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.product:hover .pic img{transform:scale(1.04)}.pic{height:280px;display:grid;place-items:center;font-size:65px}.product:nth-child(1) .pic{background:#ffb17c}.product:nth-child(2) .pic{background:#8aa7ff}.product:nth-child(3) .pic{background:#f4dd65}.product:nth-child(4) .pic{background:#d8b8ff}.info{padding:16px}.add{width:100%;padding:11px;background:#fff;border:1px solid #bbb;border-radius:7px}.cart{position:fixed;right:18px;bottom:18px;background:#111;color:#fff;border:0;border-radius:99px;padding:15px 20px}@media(max-width:800px){.hero{grid-template-columns:1fr}.products{grid-template-columns:1fr 1fr}}@media(max-width:500px){
+ .products{grid-template-columns:1fr}
+ .pic{height:230px}
+ .hero{padding:32px 0;gap:18px}
+ .hero h1{font-size:clamp(52px,16vw,78px);max-width:100%;overflow-wrap:anywhere}
+ .hero p{font-size:15px}
+ .ticker{font-size:11px}
+}
 
 .site-footer{
   margin-top:90px;background:#171717;color:#fff;overflow:hidden;
@@ -61,7 +68,20 @@ html,body{max-width:100%;overflow-x:hidden}
   .demo-subscribe button{text-align:left;padding:7px 0 5px}
   .footer-links{grid-template-columns:1fr}
 }
-</style><div class=wrap><header class=nav><b>NOVA GOODS®</b><nav><a>NEW</a><a>OBJECTS</a><a>ABOUT</a></nav></header><section class=hero><div><small>EVERYDAY OBJECTS, BETTER</small><h1>Good things.<br>Good design.</h1></div><div><p>Small-batch objects for desks, homes and daily routines. Designed to be used, not hidden.</p></div></section><div class=ticker>FREE DELIVERY ON ORDERS OVER $120 · NEW DROP EVERY FRIDAY ·</div><section class=products id=shop><div style="grid-column:1/-1;margin-bottom:8px"><small>THE CURRENT DROP</small><h2 style="font-size:44px;margin:8px 0 20px">Objects worth keeping.</h2></div><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85" alt="Modern arc desk lamp"></div><div class=info><h3>Arc Desk Lamp</h3><b>$95</b><button class=add onclick="add()">Add to bag</button></div></article><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1000&q=85" alt="Compact wireless speaker"></div><div class=info><h3>Loop Speaker</h3><b>$160</b><button class=add onclick="add()">Add to bag</button></div></article><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=85" alt="Minimal ceramic serving tray"></div><div class=info><h3>Mono Tray</h3><b>$48</b><button class=add onclick="add()">Add to bag</button></div></article><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1000&q=85" alt="Minimal wooden lounge chair"></div><div class=info><h3>Fold Chair</h3><b>$190</b><button class=add onclick="add()">Add to bag</button></div></article></section></div><button class=cart>Bag: <span id=count>0</span></button><script>let n=0;function add(){document.getElementById('count').textContent=++n}</script>
+<style>
+/* V7 functional mobile nav — keeps desktop design unchanged */
+.mobile-menu-toggle{display:none;border:1px solid currentColor;background:transparent;color:inherit;border-radius:999px;width:44px;height:44px;font-size:22px;line-height:1;cursor:pointer}
+.mobile-nav-panel{display:none}
+@media(max-width:700px){
+ .nav{position:relative;align-items:center}
+ .nav nav{display:none!important}
+ .mobile-menu-toggle{display:grid;place-items:center}
+ .mobile-nav-panel{position:absolute;left:0;right:0;top:100%;z-index:100;background:inherit;border-top:1px solid rgba(127,127,127,.25);padding:10px 4%;box-shadow:0 18px 35px rgba(0,0,0,.12)}
+ .mobile-nav-panel.open{display:grid}
+ .mobile-nav-panel a{padding:14px 0;border-bottom:1px solid rgba(127,127,127,.22);font-size:13px;font-weight:700;text-decoration:none!important}
+ .mobile-nav-panel a:last-child{border-bottom:0}
+}
+</style></style><div class=wrap><header class="nav"><b>NOVA GOODS®</b><nav><a href="#shop">New</a><a href="#shop">Objects</a><a href="#about">About</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#shop">New</a><a href="#shop">Objects</a><a href="#about">About</a></div></header><section class=hero><div><small>EVERYDAY OBJECTS, BETTER</small><h1>Good things.<br>Good design.</h1></div><div><p>Small-batch objects for desks, homes and daily routines. Designed to be used, not hidden.</p></div></section><span id="about"></span><div class=ticker>FREE DELIVERY ON ORDERS OVER $120 · NEW DROP EVERY FRIDAY ·</div><section class=products id=shop><div style="grid-column:1/-1;margin-bottom:8px"><small>THE CURRENT DROP</small><h2 style="font-size:44px;margin:8px 0 20px">Objects worth keeping.</h2></div><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85" alt="Modern arc desk lamp"></div><div class=info><h3>Arc Desk Lamp</h3><b>$95</b><button class=add onclick="add()">Add to bag</button></div></article><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1000&q=85" alt="Compact wireless speaker"></div><div class=info><h3>Loop Speaker</h3><b>$160</b><button class=add onclick="add()">Add to bag</button></div></article><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=85" alt="Minimal ceramic serving tray"></div><div class=info><h3>Mono Tray</h3><b>$48</b><button class=add onclick="add()">Add to bag</button></div></article><article class=product><div class=pic><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1000&q=85" alt="Minimal wooden lounge chair"></div><div class=info><h3>Fold Chair</h3><b>$190</b><button class=add onclick="add()">Add to bag</button></div></article></section></div><button class=cart>Bag: <span id=count>0</span></button><script>let n=0;function add(){document.getElementById('count').textContent=++n}</script>
 
 
 
@@ -101,3 +121,29 @@ a,a:hover,a:focus,a:visited{text-decoration:none!important}
   </div>
 </footer>
 <script>document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())</script>
+<script>
+document.querySelectorAll('.mobile-menu-toggle').forEach(btn=>btn.addEventListener('click',()=>{
+ const panel=btn.parentElement.querySelector('.mobile-nav-panel');
+ const open=panel.classList.toggle('open'); btn.setAttribute('aria-expanded',open); btn.textContent=open?'×':'☰';
+ panel.querySelectorAll('a').forEach(a=>a.onclick=()=>{panel.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';});
+}));
+</script><style>
+.product,.product *{max-width:100%;overflow-wrap:anywhere}
+.product .info h3,.product .info p{overflow-wrap:anywhere}
+</style><style>a,a:hover,a:focus,a:visited{text-decoration:none!important}</style><style>
+/* V7 subscription control: rounded, compact, and contained on mobile */
+.demo-subscribe{
+  border:1px solid #4a4a4a!important;
+  border-bottom:1px solid #4a4a4a!important;
+  border-radius:16px!important;
+  padding:6px 8px 6px 14px!important;
+  overflow:hidden!important;
+  background:rgba(255,255,255,.025);
+}
+.demo-subscribe input{padding:10px 0!important}
+.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
+@media(max-width:430px){
+ .demo-subscribe{padding:7px 10px!important}
+ .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
+}
+</style>
