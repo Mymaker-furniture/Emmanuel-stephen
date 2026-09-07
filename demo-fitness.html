@@ -275,3 +275,40 @@ img{max-width:100%}
   });
 })();
 </script>
+
+<style>
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+*,*::before,*::after{box-sizing:border-box}
+img{max-width:100%}
+input,select,textarea,button{max-width:100%;box-sizing:border-box}
+a{text-decoration:none!important}
+</style>
+
+<style>
+.join{
+  width:100%;
+  border-radius:28px!important;
+  overflow:hidden;
+}
+.join form{
+  width:100%;
+  min-width:0;
+  display:grid;
+  gap:12px;
+}
+.join input,.join select,.join button{
+  width:100%;
+  min-width:0;
+  min-height:50px;
+  border-radius:14px!important;
+  padding:14px 16px!important;
+}
+.join button{cursor:pointer;font-weight:900}
+@media(max-width:750px){
+  .join{padding:28px 20px}
+}
+@media(max-width:500px){
+  .join{padding:25px 15px;border-radius:22px!important}
+  .join h2{font-size:64px}
+}
+</style>
