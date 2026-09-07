@@ -1,5 +1,6 @@
 <!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Studio Nia</title><style>
 
+
 html,body{max-width:100%;overflow-x:hidden}
 *{box-sizing:border-box}body{margin:0;background:#fbf7f2;color:#292321;font-family:Arial}.wrap{width:min(1160px,92%);margin:auto}.nav{padding:24px 0;display:flex;justify-content:space-between}.logo{font:26px Georgia}.nav a{margin-left:20px;font-size:12px}.hero{display:grid;grid-template-columns:.9fr 1.1fr;min-height:650px}.copy{display:flex;flex-direction:column;justify-content:center;padding-right:50px}.copy h1{font:400 clamp(65px,8vw,110px)/.82 Georgia;margin:20px 0}.copy h1 em{color:#b66e68}.copy p{color:#766e69;max-width:480px;font-size:17px}.button{display:inline-block;background:#292321;color:white;padding:14px 20px;border-radius:99px;width:max-content;margin-top:12px}.photo{background:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85') center/cover;border-radius:280px 280px 20px 20px}.services{padding:90px 0}.grid{display:grid;grid-template-columns:repeat(4,1fr)}.service{padding:25px;border-top:1px solid #ccc;border-right:1px solid #ccc}.service b{font:23px Georgia}.book{margin:50px 0;background:#f2dfda;border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.book h2{font:45px Georgia}.book form{display:grid;gap:10px}.book input,.book select,.book button{padding:14px;border:1px solid #c8b8b2;border-radius:7px}.book button{background:#292321;color:#fff}@media(max-width:750px){.hero,.book{grid-template-columns:1fr}.photo{min-height:450px}.copy{padding:60px 0}.grid{grid-template-columns:1fr 1fr}.nav nav{display:none}}@media(max-width:450px){.grid{grid-template-columns:1fr}}
 
@@ -74,14 +75,34 @@ html,body{max-width:100%;overflow-x:hidden}
  .mobile-nav-panel a{padding:14px 0;border-bottom:1px solid rgba(127,127,127,.22);font-size:13px;font-weight:700;text-decoration:none!important}
  .mobile-nav-panel a:last-child{border-bottom:0}
 }
-</style></style><div class=wrap><header class="nav"><div class=logo>studio nia</div><nav><a href="#services">Services</a><a href="#book">Book</a><a href="#about">About</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#services">Services</a><a href="#book">Book</a><a href="#about">About</a></div></header><section class=hero><div class=copy><small>BEAUTY · WELLNESS</small><h1>Your softest <em>reset.</em></h1><p>Hair, skin and beauty rituals designed around how you want to feel.</p><a class=button href="#book">Book an appointment →</a></div><div class=photo></div></section><section class=services id=services><small>THE MENU</small><h2 style="font:48px Georgia">Rituals, not rush jobs.</h2><div class=grid><div class=service><b>01<br>Signature Hair</b><p>Cut, styling and finish.</p></div><div class=service><b>02<br>Glow Facial</b><p>Deep cleanse and hydration.</p></div><div class=service><b>03<br>Gel Manicure</b><p>Clean, simple, polished.</p></div><div class=service><b>04<br>Bridal Trial</b><p>A calm rehearsal for your day.</p></div></div></section><section class=book id=book><div><small>APPOINTMENTS</small><h2>Let's find your time.</h2></div><form onsubmit="event.preventDefault();alert('Appointment request sent!')"><input placeholder="Your name" required><select required><option value="">Service</option><option>Signature Hair</option><option>Glow Facial</option><option>Gel Manicure</option></select><input type=date required><button>Request appointment</button></form></section></div>
 
 
-
-
-<style>
 a,a:hover,a:focus,a:visited{text-decoration:none!important}
-</style>
+
+a,a:hover,a:focus,a:visited{text-decoration:none!important}
+
+/* V7 subscription control: rounded, compact, and contained on mobile */
+.demo-subscribe{
+  border:1px solid #4a4a4a!important;
+  border-bottom:1px solid #4a4a4a!important;
+  border-radius:16px!important;
+  padding:6px 8px 6px 14px!important;
+  overflow:hidden!important;
+  background:rgba(255,255,255,.025);
+}
+.demo-subscribe input{padding:10px 0!important}
+.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
+@media(max-width:430px){
+ .demo-subscribe{padding:7px 10px!important}
+ .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
+}
+
+<div class=wrap><header class="nav"><div class=logo>studio nia</div><nav><a href="#services">Services</a><a href="#book">Book</a><a href="#about">About</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#services">Services</a><a href="#book">Book</a><a href="#about">About</a></div></header><section class=hero><div class=copy><small>BEAUTY · CARE</small><h1>Your softest <em>reset.</em></h1><p>Hair, skin and beauty care designed around how you want to feel.</p><a class=button href="#book">Book an appointment →</a></div><div class=photo></div></section><section class=services id=services><small>THE MENU</small><h2 style="font:48px Georgia">Care, without the fuss.</h2><div class=grid><div class=service><b>01<br>Signature Hair</b><p>Cut, styling and finish.</p></div><div class=service><b>02<br>Glow Facial</b><p>Deep cleanse and hydration.</p></div><div class=service><b>03<br>Gel Manicure</b><p>Clean, simple, polished.</p></div><div class=service><b>04<br>Bridal Trial</b><p>A calm rehearsal for your day.</p></div></div></section><section class=book id=book><div><small>APPOINTMENTS</small><h2>Let's find your time.</h2></div><form onsubmit="event.preventDefault();alert('Appointment request sent!')"><input placeholder="Your name" required><select required><option value="">Service</option><option>Signature Hair</option><option>Glow Facial</option><option>Gel Manicure</option></select><input type=date required><button>Request appointment</button></form></section></div>
+
+
+
+
+
 
 <footer class="site-footer" style="--footer-accent:#b98774">
   <section class="demo-newsletter">
@@ -100,12 +121,12 @@ a,a:hover,a:focus,a:visited{text-decoration:none!important}
   <div class="footer-inner">
     <div class="footer-brand">
       <strong>Studio Nia</strong>
-      <p>Hair, skin and beauty rituals designed around how you want to feel.</p>
+      <p>Hair, skin and beauty care designed around how you want to feel.</p>
     </div>
     <div class="footer-links">
       <div><b>Explore</b><a href="#top">Back to top ↑</a><a href="#top">Our story</a><a href="#top">Services</a></div>
       <div><b>Contact</b><a href="mailto:hello@example.com">Email us</a><a href="#top">Book / enquire</a></div>
-      <div><b>Availability</b><p>Open for projects<br>Worldwide</p></div>
+      <div><b>Availability</b><p>Available for projects<br>Worldwide</p></div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -114,26 +135,132 @@ a,a:hover,a:focus,a:visited{text-decoration:none!important}
   </div>
 </footer>
 <script>document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())</script>
-<script>
-document.querySelectorAll('.mobile-menu-toggle').forEach(btn=>btn.addEventListener('click',()=>{
- const panel=btn.parentElement.querySelector('.mobile-nav-panel');
- const open=panel.classList.toggle('open'); btn.setAttribute('aria-expanded',open); btn.textContent=open?'×':'☰';
- panel.querySelectorAll('a').forEach(a=>a.onclick=()=>{panel.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';});
-}));
-</script><style>a,a:hover,a:focus,a:visited{text-decoration:none!important}</style><style>
-/* V7 subscription control: rounded, compact, and contained on mobile */
-.demo-subscribe{
-  border:1px solid #4a4a4a!important;
-  border-bottom:1px solid #4a4a4a!important;
-  border-radius:16px!important;
-  padding:6px 8px 6px 14px!important;
-  overflow:hidden!important;
-  background:rgba(255,255,255,.025);
-}
-.demo-subscribe input{padding:10px 0!important}
-.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
-@media(max-width:430px){
- .demo-subscribe{padding:7px 10px!important}
- .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
-}
+
+<style>
+a,a:hover,a:focus,a:visited{text-decoration:none!important}
+html,body{max-width:100%;overflow-x:hidden}
+img{max-width:100%}
 </style>
+<style>
+
+/* Mobile navigation: hidden on desktop, polished expandable panel on phones */
+.mobile-menu-toggle{
+  display:none;
+  width:46px;height:46px;
+  border:1px solid currentColor;
+  background:transparent;
+  color:inherit;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:0;
+  position:relative;
+  z-index:120;
+}
+.mobile-menu-toggle::before,
+.mobile-menu-toggle::after,
+.mobile-menu-toggle span{
+  content:"";
+  position:absolute;
+  width:19px;height:2px;
+  background:currentColor;
+  border-radius:99px;
+  transition:transform .25s ease, opacity .2s ease;
+}
+.mobile-menu-toggle::before{transform:translateY(-6px)}
+.mobile-menu-toggle::after{transform:translateY(6px)}
+.mobile-menu-toggle span{transform:none}
+.mobile-menu-toggle.is-open::before{transform:rotate(45deg)}
+.mobile-menu-toggle.is-open::after{transform:rotate(-45deg)}
+.mobile-menu-toggle.is-open span{opacity:0}
+
+.mobile-nav-panel{
+  display:none;
+}
+
+@media (min-width:701px){
+  .mobile-menu-toggle,
+  .mobile-nav-panel{display:none!important}
+}
+
+@media (max-width:700px){
+  .nav{position:relative;z-index:100;align-items:center}
+  .nav nav{display:none!important}
+  .mobile-menu-toggle{display:flex}
+  .mobile-nav-panel{
+    position:absolute;
+    left:0;right:0;top:calc(100% + 10px);
+    z-index:110;
+    padding:10px;
+    border-radius:22px;
+    background:rgba(255,255,255,.96);
+    color:#111;
+    border:1px solid rgba(0,0,0,.10);
+    box-shadow:0 22px 55px rgba(0,0,0,.18);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    transform:translateY(-8px) scale(.98);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .22s ease, transform .22s ease;
+  }
+  .mobile-nav-panel.open{
+    display:block;
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+  }
+  .mobile-nav-panel a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:54px;
+    padding:0 15px;
+    border-radius:14px;
+    text-decoration:none!important;
+    font-size:14px;
+    font-weight:800;
+    color:inherit;
+    transition:background .18s ease, transform .18s ease;
+  }
+  .mobile-nav-panel a::after{
+    content:"↗";
+    opacity:.45;
+    font-size:17px;
+  }
+  .mobile-nav-panel a:hover,
+  .mobile-nav-panel a:active{
+    background:rgba(0,0,0,.06);
+    transform:translateX(2px);
+  }
+}
+
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('.mobile-menu-toggle').forEach(function(btn){
+    var panel = btn.parentElement.querySelector('.mobile-nav-panel');
+    if(!panel) return;
+    if(!btn.querySelector('span')) {
+      var s=document.createElement('span');
+      btn.appendChild(s);
+    }
+    btn.addEventListener('click',function(){
+      var open=panel.classList.toggle('open');
+      btn.classList.toggle('is-open',open);
+      btn.setAttribute('aria-expanded',open ? 'true' : 'false');
+      btn.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        panel.classList.remove('open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','Open navigation');
+      });
+    });
+  });
+})();
+</script>

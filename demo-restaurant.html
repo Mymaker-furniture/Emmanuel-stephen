@@ -1,5 +1,6 @@
 <!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><div id="top"></div><title>Ember & Plate</title><style>
 
+
 html,body{max-width:100%;overflow-x:hidden}
 *{box-sizing:border-box}body{margin:0;background:#f6efdd;color:#241914;font-family:Georgia}.wrap{width:min(1100px,92%);margin:auto}.nav{padding:25px 0;display:flex;justify-content:space-between}.nav a{font:12px Arial;margin-left:20px}.hero{min-height:650px;background:linear-gradient(0deg,#170d0bcc,#0000),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;display:flex;align-items:end;padding:55px}.hero h1{font-size:clamp(60px,9vw,125px);line-height:.8;margin:12px 0}.hero p{font:18px Arial;max-width:550px}.menu{padding:90px 0}.items{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}.item{padding:20px 0;border-bottom:1px solid #c9bda8;display:flex;justify-content:space-between}.item h3{margin:0}.item p{font:13px Arial;color:#6d625a}.reserve{background:#241914;color:#fff;border-radius:25px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.reserve h2{font-size:55px;margin:0}.reserve form{display:grid;gap:10px}.reserve input,.reserve select,.reserve button{padding:14px;border:0;border-radius:7px}.reserve button{background:#c84b32;color:white;font-weight:bold}@media(max-width:700px){.nav nav{display:none}.items,.reserve{grid-template-columns:1fr}.hero{padding:25px}.hero h1{font-size:65px}}
 
@@ -13,36 +14,36 @@ html,body{max-width:100%;overflow-x:hidden}
 .site-footer{margin-top:90px}
 
 .site-footer{
-  margin-top:90px;background:#171717;color:#fff;overflow:hidden;
+ margin-top:90px;background:#171717;color:#fff;overflow:hidden;
 }
 .demo-newsletter{
-  width:min(1100px,92%);margin:auto;padding:58px 0 50px;
-  display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:end;
-  border-bottom:1px solid #303030;
+ width:min(1100px,92%);margin:auto;padding:58px 0 50px;
+ display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:end;
+ border-bottom:1px solid #303030;
 }
 .demo-newsletter .kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 .demo-newsletter h2{
-  font:600 clamp(38px,6vw,70px)/.9 "Space Grotesk";letter-spacing:-.055em;
-  margin:10px 0 0;max-width:650px;
+ font:600 clamp(38px,6vw,70px)/.9 "Space Grotesk";letter-spacing:-.055em;
+ margin:10px 0 0;max-width:650px;
 }
 .demo-newsletter p{color:#999;max-width:390px;margin:0 0 18px}
 .demo-subscribe{
-  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;
-  width:100%;border-bottom:1px solid #5a5a5a;padding-bottom:7px;
+ display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;
+ width:100%;border-bottom:1px solid #5a5a5a;padding-bottom:7px;
 }
 .demo-subscribe input{
-  min-width:0;width:100%;background:transparent;color:#fff;border:0;
-  outline:none;padding:12px 0;font-size:15px;
+ min-width:0;width:100%;background:transparent;color:#fff;border:0;
+ outline:none;padding:12px 0;font-size:15px;
 }
 .demo-subscribe input::placeholder{color:#777}
 .demo-subscribe button{
-  border:0;background:transparent;color:#fff;padding:12px 0 12px 18px;
-  font-weight:800;white-space:nowrap;cursor:pointer;
+ border:0;background:transparent;color:#fff;padding:12px 0 12px 18px;
+ font-weight:800;white-space:nowrap;cursor:pointer;
 }
 .demo-subscribe button:hover{color:#c97858}
 .footer-inner{
-  width:min(1100px,92%);margin:auto;
-  display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0;
+ width:min(1100px,92%);margin:auto;
+ display:grid;grid-template-columns:1fr 2fr;gap:55px;padding:45px 0;
 }
 .footer-brand strong{font-size:28px;letter-spacing:-.04em}
 .footer-brand p{color:#aaa;max-width:300px}
@@ -51,24 +52,24 @@ html,body{max-width:100%;overflow-x:hidden}
 .footer-links a,.footer-links p{display:block;color:#999;font-size:13px;margin:8px 0}
 .footer-links a:hover{color:#fff}
 .footer-bottom{
-  border-top:1px solid #303030;width:min(1100px,92%);margin:auto;
-  padding:20px 0;display:flex;justify-content:space-between;color:#777;font-size:12px
+ border-top:1px solid #303030;width:min(1100px,92%);margin:auto;
+ padding:20px 0;display:flex;justify-content:space-between;color:#777;font-size:12px
 }
 @media(max-width:700px){
-  .demo-newsletter{grid-template-columns:1fr;gap:24px;padding:42px 0 38px}
-  .demo-newsletter h2{font-size:47px}
-  .demo-subscribe{grid-template-columns:minmax(0,1fr) auto}
-  .demo-subscribe input,.demo-subscribe button{min-height:48px}
-  .footer-inner{grid-template-columns:1fr;gap:30px}
-  .footer-links{grid-template-columns:1fr 1fr}
-  .footer-bottom{display:block}
-  .footer-bottom span{display:block;margin:5px 0}
+ .demo-newsletter{grid-template-columns:1fr;gap:24px;padding:42px 0 38px}
+ .demo-newsletter h2{font-size:47px}
+ .demo-subscribe{grid-template-columns:minmax(0,1fr) auto}
+ .demo-subscribe input,.demo-subscribe button{min-height:48px}
+ .footer-inner{grid-template-columns:1fr;gap:30px}
+ .footer-links{grid-template-columns:1fr 1fr}
+ .footer-bottom{display:block}
+ .footer-bottom span{display:block;margin:5px 0}
 }
 @media(max-width:430px){
-  .demo-newsletter h2{font-size:39px}
-  .demo-subscribe{grid-template-columns:1fr}
-  .demo-subscribe button{text-align:left;padding:7px 0 5px}
-  .footer-links{grid-template-columns:1fr}
+ .demo-newsletter h2{font-size:39px}
+ .demo-subscribe{grid-template-columns:1fr}
+ .demo-subscribe button{text-align:left;padding:7px 0 5px}
+ .footer-links{grid-template-columns:1fr}
 }
 <style>
 /* V7 functional mobile nav — keeps desktop design unchanged */
@@ -83,11 +84,33 @@ html,body{max-width:100%;overflow-x:hidden}
  .mobile-nav-panel a{padding:14px 0;border-bottom:1px solid rgba(127,127,127,.22);font-size:13px;font-weight:700;text-decoration:none!important}
  .mobile-nav-panel a:last-child{border-bottom:0}
 }
-</style>.food-item{align-items:center;gap:16px}.food-item img{width:92px;height:76px;object-fit:cover;border-radius:10px;flex:none}.food-item>div{min-width:0}.food-item h3{overflow-wrap:anywhere}@media(max-width:700px){.food-item img{width:82px;height:68px}}
-</style><div class=wrap><header class="nav"><b>EMBER & PLATE</b><nav><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="#story">Our story</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="#story">Our story</a></div></header></div><section class=hero><div><small>MODERN  KITCHEN</small><h1>Come hungry.<br>Leave glowing.</h1><p>Fire, spice and familiar ingredients turned into an evening worth remembering.</p></div></section><main class=wrap><span id="story"></span><section class=menu id=menu>
+
+
+a,a:hover,a:focus,a:visited{text-decoration:none!important}
+
+a,a:hover,a:focus,a:visited{text-decoration:none!important}
+
+/* V7 subscription control: rounded, compact, and contained on mobile */
+.demo-subscribe{
+ border:1px solid #4a4a4a!important;
+ border-bottom:1px solid #4a4a4a!important;
+ border-radius:16px!important;
+ padding:6px 8px 6px 14px!important;
+ overflow:hidden!important;
+ background:rgba(255,255,255,.025);
+}
+.demo-subscribe input{padding:10px 0!important}
+.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
+@media(max-width:430px){
+ .demo-subscribe{padding:7px 10px!important}
+ .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
+}
+
+.food-item{align-items:center;gap:16px}.food-item img{width:92px;height:76px;object-fit:cover;border-radius:10px;flex:none}.food-item>div{min-width:0}.food-item h3{overflow-wrap:anywhere}@media(max-width:700px){.food-item img{width:82px;height:68px}}
+<div class=wrap><header class="nav"><b>EMBER & PLATE</b><nav><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="#story">Our story</a></nav><button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><div class="mobile-nav-panel"><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="#story">Our story</a></div></header></div><section class=hero><div><small>MODERN KITCHEN</small><h1>Come hungry.<br>Leave glowing.</h1><p>Fire, spice and familiar ingredients turned into an evening worth remembering.</p></div></section><main class=wrap><span id="story"></span><section class=menu id=menu>
 <h2 style="font-size:48px">Tonight's table</h2>
 <div class=menu-tabs>
-  <a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#sides">Sides</a><a href="#desserts">Desserts</a><a href="#drinks">Drinks</a>
+ <a href="#starters">Starters</a><a href="#mains">Mains</a><a href="#sides">Sides</a><a href="#desserts">Desserts</a><a href="#drinks">Drinks</a>
 </div>
 <div class=category id=starters><h3>01 · Starters</h3><div class=items>
 <div class=item><div><h3>Suya Butter Prawns</h3><p>Charred prawns, lime, suya butter</p></div><b></b></div>
@@ -114,66 +137,204 @@ html,body{max-width:100%;overflow-x:hidden}
 <div class=item><div><h3>Hibiscus Spritz</h3><p>Hibiscus, citrus, sparkling water</p></div><b></b></div>
 <div class=item><div><h3>House Lemonade</h3><p>Lemon, vanilla, fresh basil</p></div><b></b></div>
 </div></div>
-</section></section><section id=story style="padding:30px 0 70px"><small>OUR STORY</small><h2 style="font-size:42px;max-width:760px">A  kitchen built around smoke, spice and the comfort of a familiar table.</h2><p style="font:16px Arial;color:#6d625a;max-width:680px">Ember & Plate brings familiar  ingredients into a modern evening format — generous food, warm service and a room made for lingering.</p></section><section class=reserve id=reserve><div><small>YOUR TABLE</small><h2>Make an evening of it.</h2><p style="font:16px Arial;color:#ccc">Choose a date and party size.</p></div><form onsubmit="event.preventDefault();alert('Reservation request received!')"><input placeholder="Your name" required><input type=date required><select required><option value="">Guests</option><option>2</option><option>4</option><option>6</option></select><button>Request a table</button></form></section></main>
+</section></section><section id=story style="padding:30px 0 70px"><small>OUR STORY</small><h2 style="font-size:42px;max-width:760px">A kitchen built around smoke, spice and the comfort of a familiar table.</h2><p style="font:16px Arial;color:#6d625a;max-width:680px">Ember & Plate brings familiar ingredients into a modern evening format — generous food, warm service and a room made for lingering.</p></section><section class=reserve id=reserve><div><small>YOUR TABLE</small><h2>Make an evening of it.</h2><p style="font:16px Arial;color:#ccc">Choose a date and party size.</p></div><form onsubmit="event.preventDefault();alert('Reservation request received!')"><input placeholder="Your name" required><input type=date required><select required><option value="">Guests</option><option>2</option><option>4</option><option>6</option></select><button>Request a table</button></form></section></main>
 
 
 
+
+
+
+<footer class="site-footer" style="--footer-accent:#b75b43">
+ <section class="demo-newsletter">
+ <div>
+ <div class="kicker">Stay in the loop</div>
+ <h2>Good things worth hearing about.</h2>
+ </div>
+ <div>
+ <p>Occasional updates, new work and useful ideas. No inbox clutter.</p>
+ <form class="demo-subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';">
+ <input type="email" placeholder="Your email address" aria-label="Email address" required>
+ <button type="submit">Subscribe →</button>
+ </form>
+ </div>
+ </section>
+ <div class="footer-inner">
+ <div class="footer-brand">
+ <strong>Ember & Plate</strong>
+ <p>A modern kitchen built around fire, spice and familiar ingredients.</p>
+ </div>
+ <div class="footer-links">
+ <div><b>Explore</b><a href="#top">Back to top ↑</a><a href="#top">Our story</a><a href="#top">Services</a></div>
+ <div><b>Contact</b><a href="mailto:hello@example.com">Email us</a><a href="#top">Book / enquire</a></div>
+ <div><b>Availability</b><p>Available for projects<br>Worldwide</p></div>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <span>&copy; <span class="year"></span> Ember & Plate</span>
+ <span>All rights reserved.</span>
+ </div>
+</footer>
+<script>document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())</script>
 
 <style>
 a,a:hover,a:focus,a:visited{text-decoration:none!important}
+html,body{max-width:100%;overflow-x:hidden}
+img{max-width:100%}
+</style>
+<style>
+
+/* Mobile navigation: hidden on desktop, polished expandable panel on phones */
+.mobile-menu-toggle{
+ display:none;
+ width:46px;height:46px;
+ border:1px solid currentColor;
+ background:transparent;
+ color:inherit;
+ border-radius:50%;
+ align-items:center;
+ justify-content:center;
+ cursor:pointer;
+ font-size:0;
+ position:relative;
+ z-index:120;
+}
+.mobile-menu-toggle::before,
+.mobile-menu-toggle::after,
+.mobile-menu-toggle span{
+ content:"";
+ position:absolute;
+ width:19px;height:2px;
+ background:currentColor;
+ border-radius:99px;
+ transition:transform .25s ease, opacity .2s ease;
+}
+.mobile-menu-toggle::before{transform:translateY(-6px)}
+.mobile-menu-toggle::after{transform:translateY(6px)}
+.mobile-menu-toggle span{transform:none}
+.mobile-menu-toggle.is-open::before{transform:rotate(45deg)}
+.mobile-menu-toggle.is-open::after{transform:rotate(-45deg)}
+.mobile-menu-toggle.is-open span{opacity:0}
+
+.mobile-nav-panel{
+ display:none;
+}
+
+@media (min-width:701px){
+ .mobile-menu-toggle,
+ .mobile-nav-panel{display:none!important}
+}
+
+@media (max-width:700px){
+ .nav{position:relative;z-index:100;align-items:center}
+ .nav nav{display:none!important}
+ .mobile-menu-toggle{display:flex}
+ .mobile-nav-panel{
+ position:absolute;
+ left:0;right:0;top:calc(100% + 10px);
+ z-index:110;
+ padding:10px;
+ border-radius:22px;
+ background:rgba(255,255,255,.96);
+ color:#111;
+ border:1px solid rgba(0,0,0,.10);
+ box-shadow:0 22px 55px rgba(0,0,0,.18);
+ backdrop-filter:blur(18px);
+ -webkit-backdrop-filter:blur(18px);
+ transform:translateY(-8px) scale(.98);
+ opacity:0;
+ pointer-events:none;
+ transition:opacity .22s ease, transform .22s ease;
+ }
+ .mobile-nav-panel.open{
+ display:block;
+ opacity:1;
+ transform:translateY(0) scale(1);
+ pointer-events:auto;
+ }
+ .mobile-nav-panel a{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ min-height:54px;
+ padding:0 15px;
+ border-radius:14px;
+ text-decoration:none!important;
+ font-size:14px;
+ font-weight:800;
+ color:inherit;
+ transition:background .18s ease, transform .18s ease;
+ }
+ .mobile-nav-panel a::after{
+ content:"↗";
+ opacity:.45;
+ font-size:17px;
+ }
+ .mobile-nav-panel a:hover,
+ .mobile-nav-panel a:active{
+ background:rgba(0,0,0,.06);
+ transform:translateX(2px);
+ }
+}
+
 </style>
 
-<footer class="site-footer" style="--footer-accent:#b75b43">
-  <section class="demo-newsletter">
-    <div>
-      <div class="kicker">Stay in the loop</div>
-      <h2>Good things worth hearing about.</h2>
-    </div>
-    <div>
-      <p>Occasional updates, new work and useful ideas. No inbox clutter.</p>
-      <form class="demo-subscribe" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓';">
-        <input type="email" placeholder="Your email address" aria-label="Email address" required>
-        <button type="submit">Subscribe →</button>
-      </form>
-    </div>
-  </section>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <strong>Ember & Plate</strong>
-      <p>A modern kitchen built around fire, spice and familiar ingredients.</p>
-    </div>
-    <div class="footer-links">
-      <div><b>Explore</b><a href="#top">Back to top ↑</a><a href="#top">Our story</a><a href="#top">Services</a></div>
-      <div><b>Contact</b><a href="mailto:hello@example.com">Email us</a><a href="#top">Book / enquire</a></div>
-      <div><b>Availability</b><p>Open for projects<br>Worldwide</p></div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; <span class="year"></span> Ember & Plate</span>
-    <span>All rights reserved.</span>
-  </div>
-</footer>
-<script>document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())</script>
 <script>
-document.querySelectorAll('.mobile-menu-toggle').forEach(btn=>btn.addEventListener('click',()=>{
- const panel=btn.parentElement.querySelector('.mobile-nav-panel');
- const open=panel.classList.toggle('open'); btn.setAttribute('aria-expanded',open); btn.textContent=open?'×':'☰';
- panel.querySelectorAll('a').forEach(a=>a.onclick=()=>{panel.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';});
-}));
-</script><style>a,a:hover,a:focus,a:visited{text-decoration:none!important}</style><style>
-/* V7 subscription control: rounded, compact, and contained on mobile */
-.demo-subscribe{
-  border:1px solid #4a4a4a!important;
-  border-bottom:1px solid #4a4a4a!important;
-  border-radius:16px!important;
-  padding:6px 8px 6px 14px!important;
-  overflow:hidden!important;
-  background:rgba(255,255,255,.025);
+(function(){
+ document.querySelectorAll('.mobile-menu-toggle').forEach(function(btn){
+ var panel = btn.parentElement.querySelector('.mobile-nav-panel');
+ if(!panel) return;
+ if(!btn.querySelector('span')) {
+ var s=document.createElement('span');
+ btn.appendChild(s);
+ }
+ btn.addEventListener('click',function(){
+ var open=panel.classList.toggle('open');
+ btn.classList.toggle('is-open',open);
+ btn.setAttribute('aria-expanded',open ? 'true' : 'false');
+ btn.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation');
+ });
+ panel.querySelectorAll('a').forEach(function(a){
+ a.addEventListener('click',function(){
+ panel.classList.remove('open');
+ btn.classList.remove('is-open');
+ btn.setAttribute('aria-expanded','false');
+ btn.setAttribute('aria-label','Open navigation');
+ });
+ });
+ });
+})();
+</script>
+
+<style>
+.food-item{
+ display:flex;
+ align-items:center;
+ gap:16px;
+ min-width:0;
 }
-.demo-subscribe input{padding:10px 0!important}
-.demo-subscribe button{padding:10px 12px!important;border-radius:11px!important}
-@media(max-width:430px){
- .demo-subscribe{padding:7px 10px!important}
- .demo-subscribe button{text-align:center!important;padding:11px!important;margin-top:4px}
+.food-item img{
+ width:92px!important;
+ height:76px!important;
+ min-width:92px;
+ max-width:92px!important;
+ min-height:76px;
+ max-height:76px!important;
+ object-fit:cover!important;
+ display:block;
+ flex:0 0 92px;
+ border-radius:12px;
+}
+.food-item>div{min-width:0;flex:1}
+.food-item h3,.food-item p{
+ overflow-wrap:anywhere;
+ word-break:normal;
+}
+@media(max-width:700px){
+ .food-item img{
+ width:82px!important;height:68px!important;
+ min-width:82px;max-width:82px!important;
+ min-height:68px;max-height:68px!important;
+ flex-basis:82px;
+ }
 }
 </style>

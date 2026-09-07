@@ -1,4 +1,6 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emmanuel Stephen — Websites built for businesses</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Emmanuel Stephen — Websites built for businesses</title><style>
+
+<link rel="stylesheet" href="style.css"></head><body>
 <nav class="nav"><div class="wrap navin"><a class="brand" href="#">Emmanuel<span>.</span></a>
 <div class="links"><a href="#work">Work</a><a href="#about">Approach</a><a href="#contact">Start a project</a></div>
 <button class="mobile-menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button></div>
@@ -15,9 +17,174 @@
 <a class="demo-card" href="demo-store.html"><div class="visual"><span class="visual-title">NOVA<br>GOODS®</span></div><div class="demo-info"><h3>E-commerce</h3><p>Editorial storefront with products and live bag count.</p><span class="open">Explore site →</span></div></a>
 </div></div></section>
 <section id="about"><div class="wrap about"><div><div class="eyebrow">My approach</div><h2>I care about what happens after someone lands on the page.</h2></div><div class="aboutbox"><p>I don't want to make websites that merely look good in a screenshot. The navigation, content, calls to action and mobile experience should make sense for the business behind the website.</p><p>Every demo here is built to show that thinking: different goals, different layouts, different visual systems.</p><div class="skills"><span class="skill">Responsive design</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span><span class="skill">UI design</span><span class="skill">Business websites</span></div></div></div></section>
-<section id="contact"><div class="wrap"><div class="cta"><div><div class="eyebrow" style="color:#080808">Have a project?</div><h2>Let's build something people can actually use.</h2><p>Tell me what your business does and what you want the website to accomplish.</p></div><a href="mailto:hello@emmanuelstephen.dev">Start a conversation →</a></div></div></section></main>
-<footer><div class="wrap newsletter"><div><div class="eyebrow">Occasional updates</div><h2>Web design ideas for business owners.</h2><p>Short notes on websites, conversion and useful digital experiences. No spam.</p></div><form class="subscribe" onsubmit="event.preventDefault();this.innerHTML='<strong style=&quot;color:#d8ff45&quot;>You’re on the list ✓</strong>'"><input type="email" required placeholder="Your email address" aria-label="Email address"><button>Subscribe</button></form></div><div class="wrap footgrid"><div><div class="footbrand">Emmanuel<span style="color:#d8ff45">.</span></div><p>Websites built for businesses, not templates.</p></div><div><h4>Explore</h4><a href="#work">Work</a><a href="#about">Approach</a><a href="#contact">Contact</a></div><div><h4>Demos</h4><a href="demo-realestate.html">Real estate</a><a href="demo-restaurant.html">Restaurant</a><a href="demo-store.html">E-commerce</a></div><div><h4>Elsewhere</h4><a href="#contact">Email</a><a href="#work">Projects</a><a href="#about">About</a></div></div><div class="wrap bottom"><span>© <span data-year></span> Emmanuel Stephen</span><span>Built with intention.</span></div></footer><script>document.querySelector('[data-year]').textContent=new Date().getFullYear()</script><script>
-const menuBtn=document.querySelector('.mobile-menu-toggle'), mobileNav=document.querySelector('.mobile-nav-panel');
-if(menuBtn){menuBtn.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);menuBtn.textContent=open?'×':'☰';});
-mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));}
-</script></body></html>
+<section id="contact"><div class="wrap"><div class="cta"><div><div class="eyebrow" style="color:#080808">Have a project?</div><h2>Let's build something people can actually use.</h2><p>Tell me what your business does and what you want the website to accomplish.</p></div><a href="mailto:codingtom10@gmail.com">Start a conversation →</a></div></div></section></main>
+<footer><div class="wrap newsletter"><div><div class="eyebrow">Occasional updates</div><h2>Web design ideas for business owners.</h2><p>Short notes on websites, conversion and useful digital experiences. No spam.</p></div><form class="subscribe" onsubmit="event.preventDefault();var e=this.querySelector('input').value;window.location.href='mailto:codingtom10@gmail.com?subject=Newsletter%20subscription&body=Please%20add%20' + encodeURIComponent(e) + '%20to%20your%20newsletter.';"><input type="email" required placeholder="Your email address" aria-label="Email address"><button>Subscribe</button></form></div><div class="wrap footgrid"><div><div class="footbrand">Emmanuel<span style="color:#c97858">.</span></div><p>Websites built for businesses, not templates.</p></div><div><h4>Explore</h4><a href="#work">Work</a><a href="#about">Approach</a><a href="#contact">Contact</a></div><div><h4>Demos</h4><a href="demo-realestate.html">Real estate</a><a href="demo-restaurant.html">Restaurant</a><a href="demo-store.html">E-commerce</a></div><div><h4>Elsewhere</h4><a href="#contact">Email</a><a href="#work">Projects</a><a href="#about">About</a></div></div><div class="wrap bottom"><span>© <span data-year></span> Emmanuel Stephen</span><span>Built with intention.</span></div></footer><script>document.querySelector('[data-year]').textContent=new Date().getFullYear()</script></body></html><style>
+
+/* Mobile navigation: hidden on desktop, polished expandable panel on phones */
+.mobile-menu-toggle{
+  display:none;
+  width:46px;height:46px;
+  border:1px solid currentColor;
+  background:transparent;
+  color:inherit;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  font-size:0;
+  position:relative;
+  z-index:120;
+}
+.mobile-menu-toggle::before,
+.mobile-menu-toggle::after,
+.mobile-menu-toggle span{
+  content:"";
+  position:absolute;
+  width:19px;height:2px;
+  background:currentColor;
+  border-radius:99px;
+  transition:transform .25s ease, opacity .2s ease;
+}
+.mobile-menu-toggle::before{transform:translateY(-6px)}
+.mobile-menu-toggle::after{transform:translateY(6px)}
+.mobile-menu-toggle span{transform:none}
+.mobile-menu-toggle.is-open::before{transform:rotate(45deg)}
+.mobile-menu-toggle.is-open::after{transform:rotate(-45deg)}
+.mobile-menu-toggle.is-open span{opacity:0}
+
+.mobile-nav-panel{
+  display:none;
+}
+
+@media (min-width:701px){
+  .mobile-menu-toggle,
+  .mobile-nav-panel{display:none!important}
+}
+
+@media (max-width:700px){
+  .nav{position:relative;z-index:100;align-items:center}
+  .nav nav{display:none!important}
+  .mobile-menu-toggle{display:flex}
+  .mobile-nav-panel{
+    position:absolute;
+    left:0;right:0;top:calc(100% + 10px);
+    z-index:110;
+    padding:10px;
+    border-radius:22px;
+    background:rgba(255,255,255,.96);
+    color:#111;
+    border:1px solid rgba(0,0,0,.10);
+    box-shadow:0 22px 55px rgba(0,0,0,.18);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    transform:translateY(-8px) scale(.98);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .22s ease, transform .22s ease;
+  }
+  .mobile-nav-panel.open{
+    display:block;
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+  }
+  .mobile-nav-panel a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:54px;
+    padding:0 15px;
+    border-radius:14px;
+    text-decoration:none!important;
+    font-size:14px;
+    font-weight:800;
+    color:inherit;
+    transition:background .18s ease, transform .18s ease;
+  }
+  .mobile-nav-panel a::after{
+    content:"↗";
+    opacity:.45;
+    font-size:17px;
+  }
+  .mobile-nav-panel a:hover,
+  .mobile-nav-panel a:active{
+    background:rgba(0,0,0,.06);
+    transform:translateX(2px);
+  }
+}
+
+/* Main portfolio mobile nav panel is wider, richer and still fits narrow phones */
+@media(max-width:700px){
+  .nav{position:relative}
+  .mobile-nav-panel{
+    left:0;right:0;
+    top:calc(100% + 10px);
+  }
+}
+</style>
+
+<script>
+(function(){
+  document.querySelectorAll('.mobile-menu-toggle').forEach(function(btn){
+    var panel = btn.parentElement.querySelector('.mobile-nav-panel');
+    if(!panel) return;
+    if(!btn.querySelector('span')) {
+      var s=document.createElement('span');
+      btn.appendChild(s);
+    }
+    btn.addEventListener('click',function(){
+      var open=panel.classList.toggle('open');
+      btn.classList.toggle('is-open',open);
+      btn.setAttribute('aria-expanded',open ? 'true' : 'false');
+      btn.setAttribute('aria-label',open ? 'Close navigation' : 'Open navigation');
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',function(){
+        panel.classList.remove('open');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','Open navigation');
+      });
+    });
+  });
+})();
+</script>
+
+<style>
+.subscribe{
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:7px;
+  padding:6px;
+  border:1px solid #d7d5cd;
+  border-radius:20px;
+  background:#fff;
+  overflow:hidden;
+}
+.subscribe input{
+  min-width:0;
+  width:100%;
+  border:0!important;
+  outline:0;
+  background:transparent;
+  padding:13px 12px;
+}
+.subscribe button{
+  border:0;
+  border-radius:14px!important;
+  padding:13px 18px;
+  white-space:nowrap;
+}
+@media(max-width:600px){
+  .subscribe{
+    grid-template-columns:1fr;
+    border-radius:18px;
+    padding:7px;
+  }
+  .subscribe input,.subscribe button{
+    width:100%;
+    min-height:48px;
+  }
+}
+</style>
