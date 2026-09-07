@@ -65,11 +65,11 @@ section{padding:80px 0}
 .visual{height:240px;padding:24px}
 .demo-card:nth-child(1) .visual{height:500px;background:linear-gradient(0deg,#000a,#0000),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=80') center/cover}
 .demo-card:nth-child(2) .visual{background:linear-gradient(0deg,#0007,#0000),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80') center/cover}
-.demo-card:nth-child(3) .visual{background:linear-gradient(135deg,#ead3ce,#f8f3ed)}
-.demo-card:nth-child(4) .visual{background:linear-gradient(135deg,#0c0c0c,#242424)}
-.demo-card:nth-child(5) .visual{background:linear-gradient(135deg,#4058ff,#161616)}
-.demo-card:nth-child(6) .visual{background:linear-gradient(135deg,#eeeaff,#d8d0ff)}
-.demo-card:nth-child(7) .visual{background:linear-gradient(135deg,#ffb17c,#8aa7ff)}
+.demo-card:nth-child(3) .visual{background:linear-gradient(0deg,#0005,#0000),url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80') center/cover}
+.demo-card:nth-child(4) .visual{background:linear-gradient(0deg,#0007,#0000),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80') center/cover}
+.demo-card:nth-child(5) .visual{background:linear-gradient(0deg,#0007,#0000),url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80') center/cover}
+.demo-card:nth-child(6) .visual{background:linear-gradient(0deg,#0005,#0000),url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80') center/cover}
+.demo-card:nth-child(7) .visual{background:linear-gradient(0deg,#0006,#0000),url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80') center/cover}
 .visual-title{font:600 2.1rem "Space Grotesk";letter-spacing:-.05em}
 .demo-card:nth-child(1) .visual-title,.demo-card:nth-child(2) .visual-title{color:#fff}
 .demo-info{padding:22px}
@@ -187,3 +187,13 @@ button,a,input,textarea,select{max-width:100%}
 .subscribe input{border:0!important;border-radius:11px}
 .subscribe button{border-radius:11px}
 @media(max-width:600px){.subscribe{padding:7px}.subscribe input,.subscribe button{border-radius:11px}}
+
+/* V11: photographic demo cards */
+.demo-card:nth-child(3) .visual-title,
+.demo-card:nth-child(4) .visual-title,
+.demo-card:nth-child(5) .visual-title,
+.demo-card:nth-child(6) .visual-title,
+.demo-card:nth-child(7) .visual-title{
+  color:#fff;
+  text-shadow:0 2px 18px rgba(0,0,0,.35);
+}
